@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZPSegmentBarOC_Example' do
+  pod 'ZPSegmentBarOC', :path => '../'
+
+  target 'ZPSegmentBarOC_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
