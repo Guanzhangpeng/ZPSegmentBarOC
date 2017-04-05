@@ -30,16 +30,17 @@
         vc.view.backgroundColor=[UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
         [childVcs addObject:vc];
     }
-    ZPSegmentBarStyle * style=[[ZPSegmentBarStyle alloc] init];
-    style.isScrollEnabled=YES;//默认YES
-    style.isShowCover=YES;//默认YES;
-    style.isShowBottomLine=YES;//默认YES;
-    style.isNeedScale=YES;//默认YES;
+ZPSegmentBarStyle * style=[[ZPSegmentBarStyle alloc] init];
+style.isScrollEnabled=YES;//导航条是否可以滚动,默认YES;
+style.isShowCover=YES;//导航条是否显示遮盖效果,默认YES;
+style.coverViewMargin=6;//遮盖间距;
+style.isShowBottomLine=YES;//导航条下方是否显示BottomLine,默认YES;
+style.bottomLineColor=[UIColor orangeColor];//BottomLine 的颜色;
+style.isNeedScale=YES;//导航条是否有放大效果,默认YES;
     
     ZPSegmentView * segmentView=[[ZPSegmentView alloc]initWithFrame:frame];
     segmentView.backgroundColor=[UIColor purpleColor];
     [segmentView setupWithtitles:titles style:style childVcs:childVcs parentVc:self];
-    
     [self.view addSubview:segmentView];
     
 }
