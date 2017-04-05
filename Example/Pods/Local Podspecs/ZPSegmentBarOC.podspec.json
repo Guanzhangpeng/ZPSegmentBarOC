@@ -1,0 +1,22 @@
+{
+  "name": "ZPSegmentBarOC",
+  "version": "0.1.0",
+  "summary": "A short description of ZPSegmentBarOC.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zswangzp@163.com/ZPSegmentBarOC",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zswangzp@163.com": "zswangzp@163.com"
+  },
+  "source": {
+    "git": "https://github.com/zswangzp@163.com/ZPSegmentBarOC.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZPSegmentBarOC/Classes/**/*"
+}

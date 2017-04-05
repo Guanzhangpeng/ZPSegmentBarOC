@@ -1,0 +1,16 @@
+PODS:
+  - ZPSegmentBarOC (0.1.0)
+
+DEPENDENCIES:
+  - ZPSegmentBarOC (from `../`)
+
+EXTERNAL SOURCES:
+  ZPSegmentBarOC:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZPSegmentBarOC: e9ae8b2611bef92bce1ff628c110cdbfe6eb9a76
+
+PODFILE CHECKSUM: 93ade9db1ce2e38d091971a82e0613baf217a88d
+
+COCOAPODS: 1.2.0

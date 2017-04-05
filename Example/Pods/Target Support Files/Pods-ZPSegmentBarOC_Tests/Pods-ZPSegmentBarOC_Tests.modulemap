@@ -1,0 +1,6 @@
+framework module Pods_ZPSegmentBarOC_Tests {
+  umbrella header "Pods-ZPSegmentBarOC_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
