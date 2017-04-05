@@ -25,7 +25,7 @@ TODO: 仿今日头条 网易新闻 导航栏效果 OC版本
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zswangzp@163.com' => 'zswangzp@163.com' }
-  s.source           = { :git => 'https://github.com/zswangzp@163.com/ZPSegmentBarOC.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Guanzhangpeng/ZPSegmentBarOC.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
