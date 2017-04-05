@@ -1,6 +1,4 @@
-# ZPSegmentBarOC
-
-##该框架分为OC和Swfit两个版本:点击前往[Swift版本](https://github.com/Guanzhangpeng/ZPSegmentBar)
+## ZPSegmentBarOC  该框架分为OC和Swfit两个版本:点击前往[Swift版本](https://github.com/Guanzhangpeng/ZPSegmentBar)
 
 ### 模仿今日头条或者是网易新闻 NavigationBar 效果,效果图如下:
  
