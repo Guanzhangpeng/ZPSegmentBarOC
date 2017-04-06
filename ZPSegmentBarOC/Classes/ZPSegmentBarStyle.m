@@ -20,7 +20,7 @@
         self.titleHeight=44;
         self.titleMargin=20;
         self.titleFont=[UIFont systemFontOfSize:17];
-        self.titleViewBG=[UIColor grayColor];
+        self.titleViewBG=[UIColor purpleColor];
         
         //字体颜色
         self.normalColor=[UIColor whiteColor];

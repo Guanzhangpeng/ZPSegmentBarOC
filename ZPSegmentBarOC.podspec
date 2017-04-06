@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZPSegmentBarOC'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '仿今日头条导航栏'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: 仿今日头条 网易新闻 导航栏效果 OC版本
                        DESC
 
-  s.homepage         = 'https://github.com/zswangzp@163.com/ZPSegmentBarOC'
+  s.homepage         = 'https://github.com/Guanzhangpeng/ZPSegmentBarOC.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zswangzp@163.com' => 'zswangzp@163.com' }

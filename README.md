@@ -6,32 +6,40 @@
 ![scroll2.gif](http://upload-images.jianshu.io/upload_images/1154433-5e2d81b327126e04.gif?imageMogr2/auto-orient/strip)
 
 
- 集成该框架非常的方便,我们只需要调用 
+ 集成该框架步骤:
  
- ```
+##### 1. 导入`ZPSegmentView`头文件: `#import "ZPSegmentView.h"`
+ 
+##### 2. 实例化`ZPSegmentBarStyle`,并且传入我们需要的样式,例如:
+
+  ```
+  ZPSegmentBarStyle * style=[[ZPSegmentBarStyle alloc] init];
+  style.isScrollEnabled=YES;//导航条是否可以滚动,默认YES;
+  style.isShowCover=YES;//导航条是否显示遮盖效果,默认YES;
+  style.coverViewMargin=6;//遮盖间距;
+  style.isShowBottomLine=YES;//导航条下方是否显示BottomLine,默认YES;
+  style.bottomLineColor=[UIColor orangeColor];//BottomLine 的颜色;
+  style.isNeedScale=YES;//导航条是否有放大效果,默认YES;
+  style.titleViewBG=[UIColor purpleColor];//导航条背景颜色,默认为紫色;
+  ...
+  ...
+  ...  
+  ```
+##### 3. 实例化 `ZPSegmentView`,并且传入所需要的参数   
+
+
+```
 ZPSegmentView * segmentView=[[ZPSegmentView alloc]initWithFrame:frame];
 [segmentView setupWithtitles:titles style:style childVcs:childVcs parentVc:self];
-[self.view addSubview:segmentView];
- ``` 
- 然后传入我们期望的style效果即可,扩展性非常强,例如:
- 
-```
-ZPSegmentBarStyle * style=[[ZPSegmentBarStyle alloc] init];
-style.isScrollEnabled=YES;//导航条是否可以滚动,默认YES;
-style.isShowCover=YES;//导航条是否显示遮盖效果,默认YES;
-style.coverViewMargin=6;//遮盖间距;
-style.isShowBottomLine=YES;//导航条下方是否显示BottomLine,默认YES;
-style.bottomLineColor=[UIColor orangeColor];//BottomLine 的颜色;
-style.isNeedScale=YES;//导航条是否有放大效果,默认YES;
-...
-...
-...
-```
+    
+``` 
+##### 4. 将创建好的 `ZPSegmentView`添加到当前`View`中即可
+`[self.view addSubview:segmentView];`
 
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## 注意:
+如果是导航控制器,我们需要在集成的`View`中 设置 
+`[self setAutomaticallyAdjustsScrollViewInsets:NO];`
 
 ## Installation
 

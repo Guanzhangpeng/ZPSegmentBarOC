@@ -21,6 +21,7 @@
 
 -(void)setupWithtitles:(NSArray<NSString *>*)titles style:(ZPSegmentBarStyle *)style childVcs:(NSArray<UIViewController*>*)childVcs parentVc:(UIViewController *)parentVc
 {
+    
     self.titles=titles;
     self.childVcs=childVcs;
     self.parentVc=parentVc;
@@ -31,6 +32,7 @@
     ZPSegmentBarTitle * segmentBarTitle =[[ZPSegmentBarTitle alloc]initWithFrame:titleFrame];
     [segmentBarTitle setupWithTitles:self.titles style:self.style];
     [self addSubview:segmentBarTitle];
+    segmentBarTitle.backgroundColor=self.style.titleViewBG;
     
     //2.0 新建ZPSegmentContent
     CGRect contentFrame=CGRectMake(0, CGRectGetMaxY(segmentBarTitle.frame), self.width, self.height-segmentBarTitle.height);

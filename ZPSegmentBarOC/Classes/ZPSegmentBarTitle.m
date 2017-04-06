@@ -42,7 +42,7 @@
 @implementation ZPSegmentBarTitle
 
 -(void)setupWithTitles:(NSArray<NSString *> *)titles style:(ZPSegmentBarStyle *)style
-{
+{    
     self.titles=titles;
     self.style=style;
     _currentIndex = 0 ;
@@ -65,15 +65,6 @@
 }
 
 
--(instancetype)initWithFrame:(CGRect)frame
-{
-    if(self=[super initWithFrame:frame])
-    {
-        self.backgroundColor=self.style.titleViewBG;
-        
-    }
-    return  self;
-}
 
 #pragma mark 初始化TitleLabel
 -(void)setuptitlelabes
