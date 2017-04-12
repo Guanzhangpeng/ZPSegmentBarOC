@@ -60,7 +60,15 @@ static NSString * const contentViewID=@"contentViewID";
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:contentViewID forIndexPath:indexPath];
-    cell.backgroundColor=[UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+    
+    //移除原有的View
+    [cell.contentView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    //创建新的View
+    UIViewController * childVC = self.childVcs[indexPath.item];
+    childVC.view.frame=CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
+    [cell.contentView addSubview:childVC.view];
+    
     return  cell;
     
 }
