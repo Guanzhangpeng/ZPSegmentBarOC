@@ -26,7 +26,7 @@
     NSArray * titles = @[@"推荐",@"热点",@"直播",@"视频",@"阳光视频",@"社会热点",@"娱乐",@"科技",@"汽车"];
     NSMutableArray * childVcs=[NSMutableArray array];
     for (int i=0; i<titles.count; i++) {
-        UIViewController * vc=[[UIViewController alloc]init];
+        UITableViewController * vc=[[UITableViewController alloc]init];
         vc.view.backgroundColor=[UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
         [childVcs addObject:vc];
     }
