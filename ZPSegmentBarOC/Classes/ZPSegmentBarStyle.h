@@ -6,12 +6,9 @@
 //  Copyright © 2017年 zswangzp@163.com. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ZPSegmentBarStyle : NSObject
-//
-//public var isTitleIntop : Bool = true //标题是否在顶部
-//public var pageControlHeight : CGFloat = 20 // pageControl 的高度
 
 @property(nonatomic,assign) BOOL isScrollEnabled;////标题能否滚动
 @property(nonatomic,assign) CGFloat titleMargin;//能滚动情况下,文字的间距
