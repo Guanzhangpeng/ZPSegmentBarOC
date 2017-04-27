@@ -30,7 +30,7 @@ TODO: 仿今日头条 网易新闻 导航栏效果 OC版本
 
   s.ios.deployment_target = '8.0'
 
-
+s.source_files = 'ZPSegmentBarOC/Classes/**/*.h'
 s.public_header_files = 'ZPSegmentBarOC/Classes/**/*.h'
 s.vendored_framework = 'ZPSegmentBarOC/Products/ZPSegmentBarLib.framework'
 
