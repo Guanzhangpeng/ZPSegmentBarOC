@@ -1,16 +1,16 @@
 PODS:
-  - ZPSegmentBarOC (0.1.0)
+  - ZPSegmentBarOC (0.0.4)
 
 DEPENDENCIES:
   - ZPSegmentBarOC (from `../`)
 
 EXTERNAL SOURCES:
   ZPSegmentBarOC:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  ZPSegmentBarOC: e9ae8b2611bef92bce1ff628c110cdbfe6eb9a76
+  ZPSegmentBarOC: 98981cd4547a04a002c86e5a02914c1e73c16fa5
 
 PODFILE CHECKSUM: 93ade9db1ce2e38d091971a82e0613baf217a88d
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

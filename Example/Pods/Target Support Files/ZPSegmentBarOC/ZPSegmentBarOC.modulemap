@@ -1,6 +1,0 @@
-framework module ZPSegmentBarOC {
-  umbrella header "ZPSegmentBarOC-umbrella.h"
-
-  export *
-  module * { export * }
-}
