@@ -19,7 +19,7 @@
 /**
  初始化ZPSegmentView,设置各项数据;
 
- @param frame 当前View大小
+ @param titles 当前View大小
  @param style 当前View相关的样式
  @param childVcs 子控制器
  @param parentVc 父控制器
