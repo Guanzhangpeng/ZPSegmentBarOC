@@ -9,7 +9,7 @@ lane :PushPodsLib do |options|
 targetName = options[:targetName]  #项目名称
 commitMsg = options[:commitMsg] #commit 日志信息
 tagName = options[:tagName]     #标签名称
-
+path    = "#{targetName}.podspec"
 
 # 根据我们制定的自动化流程去写对应的action
 
@@ -49,5 +49,5 @@ pod_lib_lint(allow_warnings: true)
 
 
 # pod trunk push "#{targetName}.podspec"
-pod_push(path: "#{targetName}.podspec",allow_warnings:true)
+pod_push(path: path,allow_warnings:true)
 end
