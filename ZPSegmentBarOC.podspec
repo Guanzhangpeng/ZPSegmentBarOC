@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZPSegmentBarOC'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '仿今日头条导航栏'
 
 # This description is used to generate tags and improve search results.
@@ -30,18 +30,18 @@ TODO: 仿今日头条 网易新闻 导航栏效果 OC版本
 
   s.ios.deployment_target = '8.0'
 
-s.source_files = 'ZPSegmentBarOC/Classes/**/*.h'
-s.public_header_files = 'ZPSegmentBarOC/Classes/**/*.h'
-s.vendored_framework = 'ZPSegmentBarOC/Products/ZPSegmentBarLib.framework'
+#s.source_files = 'ZPSegmentBarOC/Classes/**/*.h'
+#s.public_header_files = 'ZPSegmentBarOC/Classes/**/*.h'
+#s.vendored_framework = 'ZPSegmentBarOC/Products/ZPSegmentBarLib.framework'
 
 
 #二进制化
-#    if ENV['IB']
-#     s.public_header_files = 'ZPSegmentBarOC/Classes/**/*.h'
-#     s.vendored_framework = 'ZPSegmentBarOC/Products/ZPSegmentBarLib.framework'
-#   else
-#     s.source_files = 'ZPSegmentBarOC/Classes/**/*'
-#   end
+   if ENV['IB']
+     s.public_header_files = 'ZPSegmentBarOC/Classes/**/*.h'
+     s.vendored_framework = 'ZPSegmentBarOC/Products/ZPSegmentBarLib.framework'
+   else
+     s.source_files = 'ZPSegmentBarOC/Classes/**/*'
+   end
 
 
   # s.resource_bundles = {

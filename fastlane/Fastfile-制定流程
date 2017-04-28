@@ -1,0 +1,35 @@
+
+# 描述一个航道,
+desc "可以快速的去编译, 上传, 一个pod私有库"
+
+
+# 定义航道
+lane :rpodLib do |options|
+targetName = options[:project]
+tag = options[:tagName]
+
+# 在这个里面, 就要根据我们制定的自动化流程, 去写 action
+
+# pod install
+
+
+# git add .
+# git commit -m "xxx"
+# git push origin master
+
+
+# 判断标签是否已经存在
+# 如果存在, 应该删除标签(本地标签, 远程标签)
+
+
+# git tag -a '#{tag}'
+# git push --tags
+
+
+# pod lib lint
+# pod repo push XMGFMSpecs "#{targetName}.podspec"
+
+
+
+
+end
