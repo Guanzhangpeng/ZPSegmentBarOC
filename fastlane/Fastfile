@@ -49,6 +49,6 @@ pod_lib_lint(allow_warnings: true)
 
 
 # pod trunk push "#{targetName}.podspec"
-pod_push
+pod_push(allow_warnings:true)
 
 end

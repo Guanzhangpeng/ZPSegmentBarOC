@@ -29,11 +29,11 @@ xcode-select --install
 </table>
 
 # Available Actions
-### privatePodLib
+### PushPodsLib
 ```
-fastlane privatePodLib
+fastlane PushPodsLib
 ```
-可以快速的去编译上传 一个pod私有库
+编译上传CocoaPods库
 
 ----
 
