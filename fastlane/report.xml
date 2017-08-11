@@ -5,54 +5,47 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: cocoapods" time="2.452804">
+      <testcase classname="fastlane.lanes" name="0: cocoapods" time="2.961985">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: git_add" time="0.015338">
+      <testcase classname="fastlane.lanes" name="1: git_add" time="0.041261">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: git_commit" time="0.021632">
+      <testcase classname="fastlane.lanes" name="2: git_commit" time="0.044538">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: push_to_git_remote" time="7.765645">
+      <testcase classname="fastlane.lanes" name="3: push_to_git_remote" time="7.738119">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: git_tag_exists" time="0.010739">
+      <testcase classname="fastlane.lanes" name="4: git_tag_exists" time="0.011431">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: remove_tag" time="9.246569">
+      <testcase classname="fastlane.lanes" name="5: add_git_tag" time="0.01544">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: add_git_tag" time="0.018325">
+      <testcase classname="fastlane.lanes" name="6: push_git_tags" time="7.651728">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: push_git_tags" time="7.330598">
+      <testcase classname="fastlane.lanes" name="7: pod_lib_lint" time="15.798605">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="8: pod_lib_lint" time="11.881619">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="9: pod_push" time="55.080921">
-        
-          <failure message="/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/runner.rb:230:in `block in execute_action'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/runner.rb:226:in `chdir'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/runner.rb:226:in `execute_action'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/runner.rb:148:in `trigger_action_by_name'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/fast_file.rb:146:in `method_missing'&#10;Fastfile:52:in `block in parsing_binding'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/lane_manager.rb:52:in `cruise_lane'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/command_line_handler.rb:30:in `handle'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/commands_generator.rb:104:in `block (2 levels) in run'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/commander-fastlane-4.4.4/lib/commander/command.rb:178:in `call'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/commander-fastlane-4.4.4/lib/commander/command.rb:153:in `run'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/commander-fastlane-4.4.4/lib/commander/runner.rb:476:in `run_active_command'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:40:in `run!'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/commander-fastlane-4.4.4/lib/commander/delegates.rb:15:in `run!'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/commands_generator.rb:303:in `run'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/fastlane/lib/fastlane/cli_tools_distributor.rb:66:in `take_off'&#10;/usr/local/lib/ruby/gems/2.4.0/gems/fastlane-2.28.5/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Exit status of command 'pod trunk push 'ZPSegmentBarOC.podspec' --allow-warnings' was 1 instead of 0.&#10;Updating spec repo `master`&#10;Validating podspec&#10; -&gt; ZPSegmentBarOC -&gt; ZPSegmentBarOC (0.1.2)&#10;    - WARN  | xcodebuild:  ZPSegmentBarOC/ZPSegmentBarOC/Classes/ZPSegmentView.m:43:30: warning: assigning to 'id&lt;ZPSegmentBarTitleDelegate&gt;' from incompatible type 'ZPSegmentBarContent *__strong'&#10;    - WARN  | xcodebuild:  ZPSegmentBarOC/ZPSegmentBarOC/Classes/ZPSegmentView.m:45:26: warning: assigning to 'id&lt;ZPSegmentBarContentDelegate&gt;' from incompatible type 'ZPSegmentBarTitle *__strong'&#10;&#10;[!] Unable to accept duplicate entry for: ZPSegmentBarOC (0.1.2)&#10;" />
+      <testcase classname="fastlane.lanes" name="8: pod_push" time="80.407403">
         
       </testcase>
     

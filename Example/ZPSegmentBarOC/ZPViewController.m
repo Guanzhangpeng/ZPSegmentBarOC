@@ -22,15 +22,12 @@
 {
     [super viewDidLoad];
     
-    UIButton *add = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    add.frame = CGRectMake(0, 0, 50, 50);
-    [self.view addSubview:add];
     
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
     CGRect frame=CGRectMake(0, 0, self.view.width, self.view.height);
-    //    NSArray * titles=@[@"头条",@"娱乐",@"视频",@"段子",@"美女"];
-    NSArray * titles = @[@"推荐",@"热点",@"直播",@"视频",@"阳光视频",@"社会热点",@"娱乐",@"科技",@"汽车"];
+        NSArray * titles=@[@"头条",@"娱乐",@"视频"];
+//    NSArray * titles = @[@"推荐",@"热点",@"直播",@"视频",@"阳光视频",@"社会热点",@"娱乐",@"科技",@"汽车"];
     NSMutableArray * childVcs=[NSMutableArray array];
     for (int i=0; i<titles.count; i++) {
         UITableViewController * vc=[[UITableViewController alloc]init];
@@ -39,7 +36,7 @@
     }
     
     ZPSegmentBarStyle * style=[[ZPSegmentBarStyle alloc] init];
-    style.isScrollEnabled=YES;//导航条是否可以滚动,默认YES;
+    style.isScrollEnabled=NO;//导航条是否可以滚动,默认YES;
     style.isShowCover=YES;//导航条是否显示遮盖效果,默认YES;
     style.coverViewMargin=6;//遮盖间距;
     style.isShowBottomLine=YES;//导航条下方是否显示BottomLine,默认YES;
@@ -57,6 +54,9 @@
 -(void)demo1
 {
     self.style.isDealFirstItem = YES;
+    
+    self.segmentView.contentView.isAutoScroll = YES;
+    
     [self.segmentView.contentView.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }
 @end

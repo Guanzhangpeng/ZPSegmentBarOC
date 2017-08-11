@@ -115,7 +115,10 @@ static NSString * const contentViewID=@"contentViewID";
         targetIndex =  sourceIndex+1;
         
         process =(contentOffsetX / self.collectionView.width) - floor((contentOffsetX / self.collectionView.width));
-        
+        if (self.isAutoScroll) {
+            targetIndex = sourceIndex;
+            process = 1;
+        }
         if ((contentOffsetX - _startOffsetX)==self.collectionView.width) {
             process=1;
             targetIndex=sourceIndex;
