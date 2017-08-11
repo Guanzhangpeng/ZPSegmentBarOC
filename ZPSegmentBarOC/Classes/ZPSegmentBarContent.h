@@ -21,7 +21,7 @@
 
 @interface ZPSegmentBarContent : UIView 
 
-
+@property(nonatomic,strong)UICollectionView * collectionView;
 -(void)setupWithChildVcs:(NSArray <UIViewController *> *)childVcs parentVc:(UIViewController *)parentVc;
 
 @property(nonatomic,weak) id<ZPSegmentBarContentDelegate> delegate;

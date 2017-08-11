@@ -11,6 +11,9 @@
 
 @interface ZPViewController ()
 
+@property (nonatomic, strong)ZPSegmentView *segmentView;
+
+@property (nonatomic, strong)ZPSegmentBarStyle *style;
 @end
 
 @implementation ZPViewController
@@ -19,10 +22,14 @@
 {
     [super viewDidLoad];
     
+    UIButton *add = [UIButton buttonWithType:UIButtonTypeContactAdd];
+    add.frame = CGRectMake(0, 0, 50, 50);
+    [self.view addSubview:add];
+    
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
     CGRect frame=CGRectMake(0, 0, self.view.width, self.view.height);
-//    NSArray * titles=@[@"头条",@"娱乐",@"视频",@"段子",@"美女"];
+    //    NSArray * titles=@[@"头条",@"娱乐",@"视频",@"段子",@"美女"];
     NSArray * titles = @[@"推荐",@"热点",@"直播",@"视频",@"阳光视频",@"社会热点",@"娱乐",@"科技",@"汽车"];
     NSMutableArray * childVcs=[NSMutableArray array];
     for (int i=0; i<titles.count; i++) {
@@ -38,11 +45,18 @@
     style.isShowBottomLine=YES;//导航条下方是否显示BottomLine,默认YES;
     style.bottomLineColor=[UIColor orangeColor];//BottomLine 的颜色;
     style.isNeedScale=YES;//导航条是否有放大效果,默认YES;
+    self.style = style;
     
     ZPSegmentView * segmentView=[[ZPSegmentView alloc]initWithFrame:frame];
-
     [segmentView setupWithtitles:titles style:style childVcs:childVcs parentVc:self];
+    self.segmentView = segmentView;
     [self.view addSubview:segmentView];
+    [self performSelector:@selector(demo1) withObject:NULL afterDelay:3];
     
+}
+-(void)demo1
+{
+    self.style.isDealFirstItem = YES;
+    [self.segmentView.contentView.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }
 @end

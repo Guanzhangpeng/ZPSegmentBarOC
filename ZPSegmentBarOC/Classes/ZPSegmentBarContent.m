@@ -16,7 +16,7 @@
     CGFloat _startOffsetX;
 }
 
-@property(nonatomic,strong)UICollectionView * collectionView;
+
 @property(nonatomic,strong)NSArray * childVcs;
 @property(nonatomic,strong)UIViewController * parentVc;
 

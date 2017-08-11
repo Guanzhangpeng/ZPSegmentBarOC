@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZPSegmentBarStyle : NSObject
-
+@property(nonatomic,assign) BOOL isDealFirstItem;//自动滚动的时候需要特殊处理下第一个选项
 @property(nonatomic,assign) BOOL isScrollEnabled;////标题能否滚动
 @property(nonatomic,assign) CGFloat titleMargin;//能滚动情况下,文字的间距
 

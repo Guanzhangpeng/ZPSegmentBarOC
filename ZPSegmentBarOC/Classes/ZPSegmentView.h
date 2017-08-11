@@ -25,4 +25,6 @@
  @param parentVc 父控制器
  */
 -(void)setupWithtitles:(NSArray<NSString *>*)titles style:(ZPSegmentBarStyle *)style childVcs:(NSArray<UIViewController*>*)childVcs parentVc:(UIViewController *)parentVc;
+
+@property (nonatomic , strong) ZPSegmentBarContent *contentView;
 @end

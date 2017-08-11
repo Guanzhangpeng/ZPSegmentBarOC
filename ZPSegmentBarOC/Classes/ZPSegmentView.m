@@ -38,6 +38,7 @@
     CGRect contentFrame=CGRectMake(0, CGRectGetMaxY(segmentBarTitle.frame), self.width, self.height-segmentBarTitle.height);
     ZPSegmentBarContent * contentView=[[ZPSegmentBarContent alloc]initWithFrame:contentFrame];
     [contentView setupWithChildVcs:self.childVcs parentVc:self.parentVc];
+    self.contentView = contentView;
     [self addSubview:contentView];
     
     segmentBarTitle.delegate = contentView;

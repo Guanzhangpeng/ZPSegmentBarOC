@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZPSegmentBarOC'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = '仿今日头条导航栏'
 
 # This description is used to generate tags and improve search results.

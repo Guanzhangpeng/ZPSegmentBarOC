@@ -270,7 +270,14 @@
     
     _currentIndex=selectedIndex;
     
-    
+    //让第一个选项 是正常的颜色
+    if(self.style.isDealFirstItem)
+    {
+        UILabel *firstLabel = self.titleLbls[0];
+        firstLabel.textColor = self.style.normalColor;
+        firstLabel.transform = CGAffineTransformIdentity;
+    }
+
     //2.0 颜色渐变
     sourceLabel.textColor= [UIColor colorWithRed:[self.selectedColorRGB[0] floatValue]-[self.deltaColorRGB[0] floatValue] * process green:[self.selectedColorRGB[1] floatValue]-[self.deltaColorRGB[1] floatValue] * process blue:[self.selectedColorRGB[2] floatValue]-[self.deltaColorRGB[2] floatValue] * process alpha:1.0];
     
