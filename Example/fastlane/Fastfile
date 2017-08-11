@@ -1,0 +1,53 @@
+
+# 该航道的描述
+desc "编译\上传CocoaPods库"
+
+
+# 定义航道 PushPodsLib:航道名称
+lane :PushPodsLib do |options|
+targetName = options[:targetName]  #项目名称
+commitMsg = options[:commitMsg] #commit 日志信息
+tagName = options[:tagName]     #标签名称
+path    = "#{targetName}.podspec"
+
+# 根据我们制定的自动化流程去写对应的action
+
+# pod install
+cocoapods(
+clean: true,
+podfile: "./Example/Podfile"
+)
+
+# git add .
+git_add(path: ".")
+
+# git commit -m "xxx"
+git_commit(path: ".", message: commitMsg)
+
+
+# git push origin master
+push_to_git_remote
+
+# 判断标签是否已经存在
+# 如果存在, 应该删除标签(本地标签, 远程标签)
+if git_tag_exists(tag: tagName)
+UI.message("已经发现存在#{tagName}这个标签, 此处, 删除该标签对应的本地和远程标签")
+remove_tag(tagName: tagName)
+
+end
+
+
+# git tag -a '#{tag}'
+add_git_tag(
+tag: tagName
+)
+# git push --tags
+push_git_tags
+
+# pod lib lint
+pod_lib_lint(allow_warnings: true)
+
+
+# pod trunk push "#{targetName}.podspec"
+pod_push(path: path,allow_warnings:true)
+end
