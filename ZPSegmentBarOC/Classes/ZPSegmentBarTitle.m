@@ -271,11 +271,12 @@
     _currentIndex=selectedIndex;
     
     //让第一个选项 是正常的颜色
-    if(self.style.isDealFirstItem)
+    if(self.style.isDealFirstItem && selectedIndex != 0 && fromIndex != 0)
     {
         UILabel *firstLabel = self.titleLbls[0];
         firstLabel.textColor = self.style.normalColor;
-        firstLabel.transform = CGAffineTransformIdentity;
+        firstLabel.transform = CGAffineTransformMakeScale(1.0 , 1.0);
+        
     }
 
     //2.0 颜色渐变

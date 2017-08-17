@@ -22,7 +22,13 @@
 @interface ZPSegmentBarContent : UIView 
 
 @property(nonatomic,strong)UICollectionView * collectionView;
-@property (nonatomic, assign) BOOL isAutoScroll;
+
+
+/**
+ 用户是否手动设置滚动到某个item
+ */
+@property (nonatomic, assign) BOOL isCustomScroll;
+
 -(void)setupWithChildVcs:(NSArray <UIViewController *> *)childVcs parentVc:(UIViewController *)parentVc;
 
 @property(nonatomic,weak) id<ZPSegmentBarContentDelegate> delegate;

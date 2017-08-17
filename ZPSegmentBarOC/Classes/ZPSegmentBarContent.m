@@ -115,9 +115,16 @@ static NSString * const contentViewID=@"contentViewID";
         targetIndex =  sourceIndex+1;
         
         process =(contentOffsetX / self.collectionView.width) - floor((contentOffsetX / self.collectionView.width));
-        if (self.isAutoScroll) {
-            targetIndex = sourceIndex;
-            process = 1;
+        
+        //处理用户手动设置滚动到某个item的情况
+        if (self.isCustomScroll) {
+            
+            if (sourceIndex >self.childVcs.count-1||targetIndex>self.childVcs.count-1||targetIndex<0 ) {
+                
+                process = 1;
+                
+                targetIndex = sourceIndex;
+            }
         }
         if ((contentOffsetX - _startOffsetX)==self.collectionView.width) {
             process=1;

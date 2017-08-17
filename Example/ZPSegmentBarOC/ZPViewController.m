@@ -48,14 +48,15 @@
     [segmentView setupWithtitles:titles style:style childVcs:childVcs parentVc:self];
     self.segmentView = segmentView;
     [self.view addSubview:segmentView];
+    
+    //3秒后自动滚动到第二个item上;
     [self performSelector:@selector(demo1) withObject:NULL afterDelay:3];
     
 }
 -(void)demo1
 {
-    self.style.isDealFirstItem = YES;
-    
-    self.segmentView.contentView.isAutoScroll = YES;
+    self.style.isDealFirstItem = YES;//用户是否手动设置滚动到某个item
+    self.segmentView.contentView.isCustomScroll = YES;
     
     [self.segmentView.contentView.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }

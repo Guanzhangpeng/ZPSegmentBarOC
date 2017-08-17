@@ -5,47 +5,9 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: cocoapods" time="2.961985">
+      <testcase classname="fastlane.lanes" name="0: cocoapods" time="1.470122">
         
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="1: git_add" time="0.041261">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="2: git_commit" time="0.044538">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="3: push_to_git_remote" time="7.738119">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="4: git_tag_exists" time="0.011431">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="5: add_git_tag" time="0.01544">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="6: push_git_tags" time="7.651728">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="7: pod_lib_lint" time="15.798605">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="8: pod_push" time="80.407403">
+          <failure message="/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/runner.rb:230:in `block in execute_action'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/runner.rb:226:in `chdir'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/runner.rb:226:in `execute_action'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/runner.rb:148:in `trigger_action_by_name'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/fast_file.rb:146:in `method_missing'&#10;Fastfile:17:in `block in parsing_binding'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/lane_manager.rb:52:in `cruise_lane'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/command_line_handler.rb:30:in `handle'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/commands_generator.rb:104:in `block (2 levels) in run'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/commander-fastlane-4.4.5/lib/commander/command.rb:178:in `call'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/commander-fastlane-4.4.5/lib/commander/command.rb:153:in `run'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/commander-fastlane-4.4.5/lib/commander/runner.rb:476:in `run_active_command'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:64:in `run!'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/commander-fastlane-4.4.5/lib/commander/delegates.rb:15:in `run!'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/commands_generator.rb:303:in `run'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/commands_generator.rb:42:in `start'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/fastlane/lib/fastlane/cli_tools_distributor.rb:66:in `take_off'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0@global/gems/fastlane-2.51.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/Users/gzp/.rvm/rubies/ruby-2.4.0/bin/fastlane:22:in `load'&#10;/Users/gzp/.rvm/rubies/ruby-2.4.0/bin/fastlane:22:in `&lt;main&gt;'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0/bin/ruby_executable_hooks:15:in `eval'&#10;/Users/gzp/.rvm/gems/ruby-2.4.0/bin/ruby_executable_hooks:15:in `&lt;main&gt;'&#10;&#10;Exit status of command 'cd './Example' &amp;&amp; pod install' was 1 instead of 0.&#10;Analyzing dependencies&#10;Fetching podspec for `ZPSegmentBarOC` from `../`&#10;[!] Failed to load 'ZPSegmentBarOC' podspec: &#10;[!] Invalid `ZPSegmentBarOC.podspec` file: Malformed version number string 0.2..&#10;&#10; #  from /Users/gzp/Desktop/Work/ZPSegmentBarOC/ZPSegmentBarOC.podspec:28&#10; #  -------------------------------------------&#10; #    s.author           = { 'zswangzp@163.com' =&gt; 'zswangzp@163.com' }&#10; &gt;    s.source           = { :git =&gt; 'https://github.com/Guanzhangpeng/ZPSegmentBarOC.git', :tag =&gt; s.version.to_s }&#10; #    # s.social_media_url = 'https://twitter.com/&lt;TWITTER_USERNAME&gt;'&#10; #  -------------------------------------------&#10;&#10;[!] Automatically assigning platform ios with version 8.0 on target ZPSegmentBarOC_Example because no platform was specified. Please specify a platform for this target in your Podfile. See `https://guides.cocoapods.org/syntax/podfile.html#platform`.&#10;" />
         
       </testcase>
     
