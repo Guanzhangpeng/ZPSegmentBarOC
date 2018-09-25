@@ -17,7 +17,8 @@
 /**
  字体属性以及间距
  */
-@property(nonatomic,assign) CGFloat titleHeight;    //ZPSegmentBar的高度
+@property(nonatomic,assign) CGFloat titleHeight;
+@property(nonatomic,assign) CGFloat segmentBarHeight;    //ZPSegmentBar的高度
 @property(nonatomic,strong) UIFont  * titleFont;     //title的字体
 @property(nonatomic,strong) UIColor * normalColor; //文本普通颜色
 @property(nonatomic,strong) UIColor * selecteColor;//文本选中颜色
@@ -51,4 +52,17 @@
 @property(nonatomic,assign) CGFloat coverViewRadius;//遮盖圆角
 @property(nonatomic,assign) CGFloat coverViewAlpha;//遮盖透明度
 @property(nonatomic,assign) CGFloat coverViewMargin;//遮盖间距
+
+/**
+图片
+ */
+@property(nonatomic,assign) BOOL isShowImage;//是否显示图片
+@property (nonatomic, strong) NSArray <NSString *>*imageNames;
+@property (nonatomic, strong) NSArray <NSString *>*selectedImageNames;
+@property (nonatomic, strong) NSArray <NSNumber *> *imageTypes;    //默认JXCategoryTitleImageType_LeftImage
+@property (nonatomic, assign) CGSize imageSize;     //默认CGSizeMake(20, 20)
+@property (nonatomic, assign) CGFloat titleImageSpacing;    //titleLabel和ImageView的间距，默认5
+@property (nonatomic, assign) BOOL imageZoomEnabled;     //默认为NO
+@property (nonatomic, assign) CGFloat imageZoomScale;    //默认1.2，imageZoomEnabled为YES才生效
+
 @end

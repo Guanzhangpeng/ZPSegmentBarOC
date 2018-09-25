@@ -17,7 +17,8 @@
         self.isScrollEnabled=YES;
         
         //字体大小和间距
-        self.titleHeight=44;
+        self.titleHeight = 44;
+        self.segmentBarHeight = 44;
         self.titleMargin=20;
         self.titleFont=[UIFont systemFontOfSize:17];
         self.titleViewBG=[UIColor purpleColor];
@@ -43,6 +44,11 @@
         self.coverViewHeight=25;
         self.coverViewRadius=12;
         self.coverViewMargin=6;
+        
+        //图片,默认不显示图片的效果
+        self.isShowImage = NO;
+        self.titleImageSpacing = 5.f;
+        self.imageSize = CGSizeMake(20.f, 20.f);
     }
     return self;
 }

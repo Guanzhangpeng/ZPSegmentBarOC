@@ -28,8 +28,8 @@
     self.style=style;
     
     //1.0 新建ZPSegmentBarTitle
-    CGRect titleFrame=CGRectMake(0, 64, self.width,self.style.titleHeight);
-    ZPSegmentBarTitle * segmentBarTitle =[[ZPSegmentBarTitle alloc]initWithFrame:titleFrame];
+    CGRect titleFrame=CGRectMake(0, 64, self.width,self.style.segmentBarHeight);
+    ZPSegmentBarTitle * segmentBarTitle =[[ZPSegmentBarTitle alloc] initWithFrame:titleFrame];
     [segmentBarTitle setupWithTitles:self.titles style:self.style];
     [self addSubview:segmentBarTitle];
     segmentBarTitle.backgroundColor=self.style.titleViewBG;

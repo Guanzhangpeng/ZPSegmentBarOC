@@ -20,6 +20,8 @@
 @property(nonatomic,strong) ZPSegmentBarStyle * style;
 @property(nonatomic,strong) NSArray<NSString *>* titles;
 @property(nonatomic,strong) NSMutableArray<UILabel *> * titleLbls;
+@property(nonatomic,strong) NSMutableArray<UIImageView *> * titleIcons;
+@property(nonatomic,strong) NSMutableArray<UIView *> * titleViews;
 
 @property(nonatomic,strong) NSArray * normalColorRGB;
 @property(nonatomic,strong) NSArray * selectedColorRGB;
@@ -51,21 +53,117 @@
     [self addSubview:self.scrollView];
     
     //2.0 初始化UILabel并且布局
-    [self setuptitlelabes];
-    
-    //3.0 添加bottomLine并且布局
-    if (self.style.isShowBottomLine) {
-        [self setupBottomLine];
-    }
-
-    //4.0 添加CoverView并且布局
-    if (self.style.isShowCover) {
-        [self setupCoverView];
+    if (self.style.isShowImage) {
+        
+        [self setupTitleAndImage];
+        
+    }else{
+         [self setuptitlelabes];
+        //3.0 添加bottomLine并且布局
+        if (self.style.isShowBottomLine) {
+            [self setupBottomLine];
+        }
+        
+        //4.0 添加CoverView并且布局
+        if (self.style.isShowCover) {
+            [self setupCoverView];
+        }
     }
 }
 
 
+#pragma mark 初始化TitleLabel和UIimageView
+- (void)setupTitleAndImage{
+    for (int i=0;i<self.titles.count;i++)
+    {
+        UIView *titleView = [[UIView alloc] init];
+        titleView.tag=i;
+        //初始化title
+        UILabel * lblTitle = [[UILabel alloc] init];
+        lblTitle.text=self.titles[i];
+        
+        lblTitle.textAlignment=NSTextAlignmentCenter;
+        lblTitle.font=self.style.titleFont;
+        lblTitle.textColor = i==0? self.style.selecteColor :self.style.normalColor;
+        lblTitle.userInteractionEnabled=YES;
+        
+        //添加点击手势;
+        UITapGestureRecognizer * tapGes =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(titleViewClick:)];
+        [titleView addGestureRecognizer:tapGes];
+       
+        //初始化icon
+        UIImageView *iconView = [[UIImageView alloc] init];
+        iconView.image = i == 0?   [UIImage imageNamed:self.style.selectedImageNames[i]]:[UIImage imageNamed:self.style.imageNames[i]];
+        [titleView addSubview:lblTitle];
+        [titleView addSubview:iconView];
+        [self.titleViews addObject:titleView];
+        [self.scrollView addSubview:titleView];
+        [self.titleIcons addObject:iconView];
+        [self.titleLbls addObject:lblTitle];
+    }
+    
+    //如果不能够滚动计算文字之间的间距;
+    CGFloat calculteMargin = 0 ;
+    CGFloat titleLabelX = 0 ;
+    CGFloat titleLabelY = 0 ;
+    CGFloat titleLabelW = 0 ;
+    NSMutableDictionary * attribute=[NSMutableDictionary dictionary];
+    attribute[NSFontAttributeName]=self.style.titleFont;
+    
+    if (!self.style.isScrollEnabled)
+    {
+        CGFloat totalWidth = 0 ;
+        for(UILabel * title in self.titleLbls)
+        {
+            titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
+            
+            totalWidth += titleLabelW;
+            
+        }
+        calculteMargin = (self.width - totalWidth)/self.titleLbls.count;
+        
+        if (calculteMargin < self.style.titleMargin) {
+            calculteMargin = self.style.titleMargin;
+        }
+    }
+    
+    //布局titleLabel的frame
+    for (int index=0; index<self.titleLbls.count; index++) {
+        
+        UILabel * title=self.titleLbls[index];
+        UIImageView *iconView = self.titleIcons[index];
+        UIView *titleView = self.titleViews[index];
+        
+        titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
+        
+        //标题能够滚动
+        if(self.style.isScrollEnabled)
+        {
+            titleLabelX = index==0 ? self.style.titleMargin * 0.5 : CGRectGetMaxX(self.titleLbls[index-1].frame)+self.style.titleMargin;
+        }
+        else
+        {
+            titleLabelX = index==0 ? calculteMargin * 0.5 : CGRectGetMaxX(self.titleViews[index-1].frame)+calculteMargin;
+        }
+        iconView.frame = CGRectMake(0.f, 5.f, self.style.imageSize.width, self.style.imageSize.height);
+        title.frame = CGRectMake(0.f, CGRectGetMaxY(iconView.frame) + self.style.titleImageSpacing, self.style.imageSize.width, self.style.titleHeight);
 
+        iconView.centerX = title.centerX;
+        titleView.frame = CGRectMake(titleLabelX, titleLabelY, self.style.imageSize.width, self.style.segmentBarHeight);
+        
+    }
+    
+    //如果titleView可以滚动设置ContentSize范围;
+    if (self.style.isScrollEnabled) {
+        self.scrollView.contentSize=CGSizeMake(CGRectGetMaxX(self.titleLbls.lastObject.frame)+self.style.titleMargin*0.5, 0);
+    }
+    
+    
+    //让第一个按钮处于选中状态;
+    if (self.style.isNeedScale) {
+        self.titleLbls.firstObject.transform= CGAffineTransformMakeScale(self.style.maxScale, self.style.maxScale);
+    }
+}
 #pragma mark 初始化TitleLabel
 -(void)setuptitlelabes
 {
@@ -167,7 +265,36 @@
     self.coverView.frame= CGRectMake(coverViewX, coverViewY, coverViewW, coverViewH);
 }
 
+- (void)titleViewClick:(UITapGestureRecognizer  *)tapGes{
+    UIView * targetView =tapGes.view ;
+    UILabel *targetLabel = targetView.subviews[0];
+    UIImageView *targetImageView = targetView.subviews[1];
+    
+    //如果是之前点击的按钮则不再继续执行;
+    if (_currentIndex == targetView.tag) {
+        return;
+    }
+    
+    //获取UILabel
+    UILabel * sourceLabel = self.titleLbls[_currentIndex];
+    sourceLabel.textColor = self.style.normalColor;
+    targetLabel.textColor = self.style.selecteColor;
+    
+    UIImageView *sourceImageView = self.titleIcons[_currentIndex];
+    sourceImageView.image = [UIImage imageNamed:self.style.imageNames[_currentIndex]];
+    targetImageView.image = [UIImage imageNamed:self.style.selectedImageNames[targetView.tag]];
 
+    //执行代理方法
+    if ([self.delegate respondsToSelector:@selector(segmentBarTitle:fromIndex:toIndex:)]) {
+        [self.delegate segmentBarTitle:self fromIndex:_currentIndex toIndex:targetView.tag];
+    }
+    
+    _currentIndex = targetView.tag;
+    //调整titleLabel的位置;
+    if (self.style.isScrollEnabled) {
+        [self adjustLabelPosition];
+    }
+}
 #pragma mark 按钮的点击事件
 -(void)titleClick:(UITapGestureRecognizer  *)tapGes
 {
@@ -180,7 +307,6 @@
     
     //获取UILabel
     UILabel * sourceLabel = self.titleLbls[_currentIndex];
-    
     sourceLabel.textColor = self.style.normalColor;
     targetLabel.textColor = self.style.selecteColor;
     
@@ -279,13 +405,34 @@
         
     }
 
-    //2.0 颜色渐变
-    sourceLabel.textColor= [UIColor colorWithRed:[self.selectedColorRGB[0] floatValue]-[self.deltaColorRGB[0] floatValue] * process green:[self.selectedColorRGB[1] floatValue]-[self.deltaColorRGB[1] floatValue] * process blue:[self.selectedColorRGB[2] floatValue]-[self.deltaColorRGB[2] floatValue] * process alpha:1.0];
-    
-    targetLabel.textColor = [UIColor colorWithRed:[self.normalColorRGB[0] floatValue]+[self.deltaColorRGB[0] floatValue] * process green:[self.normalColorRGB[1] floatValue]+[self.deltaColorRGB[1] floatValue] * process blue:[self.normalColorRGB[2] floatValue]+[self.deltaColorRGB[2] floatValue] * process alpha:1.0];
+    if (self.style.isShowImage) {
+        if (process == 1.0f) {
+            if(fromIndex == selectedIndex){
+                fromIndex --;
+            }
+            UILabel * sourceLabel = self.titleLbls[fromIndex];
+            UILabel * targetLabel = self.titleLbls[selectedIndex];
+            
+            UIImageView * sourceImageView = self.titleIcons[fromIndex];
+            UIImageView * targetImageView = self.titleIcons[selectedIndex];
+            
+            sourceImageView.image = [UIImage imageNamed:self.style.imageNames[fromIndex]];
+            targetImageView.image =[UIImage imageNamed:self.style.selectedImageNames[selectedIndex]];
+            
+            sourceLabel.textColor = self.style.normalColor;
+            targetLabel.textColor = self.style.selecteColor;
+        }
+      
+    }else{
+        //2.0 颜色渐变
+        sourceLabel.textColor= [UIColor colorWithRed:[self.selectedColorRGB[0] floatValue]-[self.deltaColorRGB[0] floatValue] * process green:[self.selectedColorRGB[1] floatValue]-[self.deltaColorRGB[1] floatValue] * process blue:[self.selectedColorRGB[2] floatValue]-[self.deltaColorRGB[2] floatValue] * process alpha:1.0];
+        
+        targetLabel.textColor = [UIColor colorWithRed:[self.normalColorRGB[0] floatValue]+[self.deltaColorRGB[0] floatValue] * process green:[self.normalColorRGB[1] floatValue]+[self.deltaColorRGB[1] floatValue] * process blue:[self.normalColorRGB[2] floatValue]+[self.deltaColorRGB[2] floatValue] * process alpha:1.0];
+    }
+   
     
     //3.0 文字缩放
-    if(self.style.isNeedScale)
+    if(self.style.isNeedScale )
     {
         CGFloat deltaScale = self.style.maxScale - 1.0 ;
         
@@ -338,7 +485,18 @@
     }
     return _titleLbls;
 }
-
+-(NSMutableArray<UIImageView *> *)titleIcons{
+    if (!_titleIcons) {
+        _titleIcons=[NSMutableArray array];
+    }
+    return _titleIcons;
+}
+-(NSMutableArray<UIView *> *)titleViews{
+    if (!_titleViews) {
+        _titleViews = [NSMutableArray array];
+    }
+    return _titleViews;
+}
 -(UIView *)bottomLine
 {
     if (!_bottomLine) {
