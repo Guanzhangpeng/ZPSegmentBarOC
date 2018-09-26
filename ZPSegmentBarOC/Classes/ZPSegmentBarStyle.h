@@ -5,6 +5,10 @@
 //  Created by 管章鹏 on 2017/3/30.
 //  Copyright © 2017年 zswangzp@163.com. All rights reserved.
 //
+#define UPDATEDOTVIEWSTATE @"UPDATEDOTVIEWSTATE"
+/**
+ 当要更新某一个控制器中小红点的显示和隐藏可以发送 UPDATEDOTVIEWSTATE 的通知,userInfo格式如: @{@"index":@"索引值",@"state":@小红点状态值} 即可控制该索引处小红点的显示和隐藏.
+ */
 
 #import <UIKit/UIKit.h>
 
@@ -64,5 +68,11 @@
 @property (nonatomic, assign) CGFloat titleImageSpacing;    //titleLabel和ImageView的间距，默认5
 @property (nonatomic, assign) BOOL imageZoomEnabled;     //默认为NO
 @property (nonatomic, assign) CGFloat imageZoomScale;    //默认1.2，imageZoomEnabled为YES才生效
+/**
+ 小红点
+ */
+@property(nonatomic,assign) BOOL isShowDot;//是否显示小红点
+@property (nonatomic, strong) NSArray <NSNumber *> *dotStates;  //@(布尔值)，控制红点是否显示
+
 
 @end

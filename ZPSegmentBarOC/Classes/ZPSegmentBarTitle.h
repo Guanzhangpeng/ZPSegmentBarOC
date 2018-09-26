@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @class ZPSegmentBarTitle,ZPSegmentBarStyle;
 
 @protocol ZPSegmentBarTitleDelegate <NSObject>

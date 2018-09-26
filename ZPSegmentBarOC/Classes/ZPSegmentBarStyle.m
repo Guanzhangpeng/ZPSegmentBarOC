@@ -49,6 +49,8 @@
         self.isShowImage = NO;
         self.titleImageSpacing = 5.f;
         self.imageSize = CGSizeMake(20.f, 20.f);
+        
+        self.isShowDot = NO;
     }
     return self;
 }

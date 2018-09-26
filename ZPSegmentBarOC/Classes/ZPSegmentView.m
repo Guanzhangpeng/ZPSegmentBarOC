@@ -28,14 +28,14 @@
     self.style=style;
     
     //1.0 新建ZPSegmentBarTitle
-    CGRect titleFrame=CGRectMake(0, 64, self.width,self.style.segmentBarHeight);
+    CGRect titleFrame=CGRectMake(0.f, 0.f, self.width,self.style.segmentBarHeight);
     ZPSegmentBarTitle * segmentBarTitle =[[ZPSegmentBarTitle alloc] initWithFrame:titleFrame];
     [segmentBarTitle setupWithTitles:self.titles style:self.style];
     [self addSubview:segmentBarTitle];
-    segmentBarTitle.backgroundColor=self.style.titleViewBG;
+    segmentBarTitle.backgroundColor= self.style.titleViewBG;
     
     //2.0 新建ZPSegmentContent
-    CGRect contentFrame=CGRectMake(0, CGRectGetMaxY(segmentBarTitle.frame), self.width, self.height-segmentBarTitle.height);
+    CGRect contentFrame=CGRectMake(0.f, CGRectGetMaxY(segmentBarTitle.frame), self.width, self.height-segmentBarTitle.height);
     ZPSegmentBarContent * contentView=[[ZPSegmentBarContent alloc]initWithFrame:contentFrame];
     [contentView setupWithChildVcs:self.childVcs parentVc:self.parentVc];
     self.contentView = contentView;

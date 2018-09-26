@@ -21,12 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-    [self setAutomaticallyAdjustsScrollViewInsets:NO];
-    
-    CGRect frame=CGRectMake(0, 0, self.view.width, self.view.height);
-        NSArray * titles=@[@"头条",@"娱乐",@"直播",@"视频"];
+        NSArray * titles=@[@"头条",@"娱乐哈哈",@"直播",@"视频"];
 //    NSArray * titles = @[@"推荐",@"热点",@"直播",@"视频",@"阳光视频",@"社会热点",@"娱乐",@"科技",@"汽车"];
     NSMutableArray * childVcs=[NSMutableArray array];
     for (int i=0; i<titles.count; i++) {
@@ -36,7 +31,7 @@
     }
     
     ZPSegmentBarStyle * style=[[ZPSegmentBarStyle alloc] init];
-    style.isScrollEnabled=NO;//导航条是否可以滚动,默认YES;
+//    style.isScrollEnabled=NO;//导航条是否可以滚动,默认YES;
 //    style.isShowCover=YES;//导航条是否显示遮盖效果,默认YES;
 //    style.coverViewMargin=6;//遮盖间距;
 //    style.isShowBottomLine=YES;//导航条下方是否显示BottomLine,默认YES;
@@ -49,23 +44,34 @@
     style.imageSize = CGSizeMake(40.f, 40.f);
     style.segmentBarHeight = 70.f;
     style.isNeedScale = NO;
+    style.isShowDot = YES;
     style.titleHeight = 18.f;
+    style.dotStates = @[@NO,@YES,@NO,@NO];
+    style.titleMargin = 50.f;
     self.style = style;
     
-    ZPSegmentView * segmentView=[[ZPSegmentView alloc]initWithFrame:frame];
+    CGFloat yCoordinate = 64.f;
+    if (@available(iOS 11.0, *)) {
+        yCoordinate = 88.f;
+    }
+    ZPSegmentView * segmentView=[[ZPSegmentView alloc]initWithFrame:CGRectMake(0.f, yCoordinate, self.view.width, self.view.height)];
     [segmentView setupWithtitles:titles style:style childVcs:childVcs parentVc:self];
     self.segmentView = segmentView;
     [self.view addSubview:segmentView];
     
     //3秒后自动滚动到第二个item上;
-//    [self performSelector:@selector(demo1) withObject:NULL afterDelay:3];
+    [self performSelector:@selector(demo1) withObject:NULL afterDelay:3];
     
 }
 -(void)demo1
 {
-    self.style.isDealFirstItem = YES;//用户是否手动设置滚动到某个item
-    self.segmentView.contentView.isCustomScroll = YES;
-    
-    [self.segmentView.contentView.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
+    NSDictionary *dict = @{@"index":@"1",
+                           @"state":@NO,
+                           };
+    [[NSNotificationCenter defaultCenter] postNotificationName:UPDATEDOTVIEWSTATE object:nil userInfo:dict];
+//    self.style.isDealFirstItem = YES;//用户是否手动设置滚动到某个item
+//    self.segmentView.contentView.isCustomScroll = YES;
+//
+//    [self.segmentView.contentView.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:2 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }
 @end

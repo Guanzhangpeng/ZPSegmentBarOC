@@ -1,7 +1,7 @@
 use_frameworks!
 platform :ios, '8.0'
 target 'ZPSegmentBarOC_Example' do
-  pod 'ZPSegmentBarOC', :path => '../'
+    pod 'ZPSegmentBarOC', :path => '../'
 
   target 'ZPSegmentBarOC_Tests' do
     inherit! :search_paths

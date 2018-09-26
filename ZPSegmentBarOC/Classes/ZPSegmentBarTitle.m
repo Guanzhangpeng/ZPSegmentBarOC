@@ -6,6 +6,7 @@
 //  Copyright © 2017年 zswangzp@163.com. All rights reserved.
 //
 
+
 #import "ZPSegmentBarTitle.h"
 #import "UIView+ZPSegmentBar.h"
 #import "ZPSegmentBarStyle.h"
@@ -22,6 +23,7 @@
 @property(nonatomic,strong) NSMutableArray<UILabel *> * titleLbls;
 @property(nonatomic,strong) NSMutableArray<UIImageView *> * titleIcons;
 @property(nonatomic,strong) NSMutableArray<UIView *> * titleViews;
+@property(nonatomic,strong) NSMutableArray<UIView *> * dotViews;
 
 @property(nonatomic,strong) NSArray * normalColorRGB;
 @property(nonatomic,strong) NSArray * selectedColorRGB;
@@ -43,8 +45,18 @@
 @end
 @implementation ZPSegmentBarTitle
 
+-(void)updateDotViewState:(NSNotification *)noti{
+   NSInteger index= [noti.userInfo[@"index"] integerValue];
+    BOOL state = [noti.userInfo[@"state"] boolValue];
+    if (self.dotViews.count > 0) {
+        
+        self.dotViews[index].hidden = !state;
+    }
+}
 -(void)setupWithTitles:(NSArray<NSString *> *)titles style:(ZPSegmentBarStyle *)style
-{    
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateDotViewState:) name:UPDATEDOTVIEWSTATE object:nil];
+    
     self.titles=titles;
     self.style=style;
     _currentIndex = 0 ;
@@ -77,6 +89,12 @@
     for (int i=0;i<self.titles.count;i++)
     {
         UIView *titleView = [[UIView alloc] init];
+        
+        UIView *dotView = [[UIView alloc] init];
+        dotView.backgroundColor = [UIColor redColor];
+        dotView.layer.cornerRadius = 6.f;
+        
+        
         titleView.tag=i;
         //初始化title
         UILabel * lblTitle = [[UILabel alloc] init];
@@ -96,10 +114,15 @@
         iconView.image = i == 0?   [UIImage imageNamed:self.style.selectedImageNames[i]]:[UIImage imageNamed:self.style.imageNames[i]];
         [titleView addSubview:lblTitle];
         [titleView addSubview:iconView];
+        [titleView addSubview:dotView];
+        
         [self.titleViews addObject:titleView];
         [self.scrollView addSubview:titleView];
         [self.titleIcons addObject:iconView];
         [self.titleLbls addObject:lblTitle];
+        [self.dotViews addObject:dotView];
+        
+        
     }
     
     //如果不能够滚动计算文字之间的间距;
@@ -133,35 +156,50 @@
         UILabel * title=self.titleLbls[index];
         UIImageView *iconView = self.titleIcons[index];
         UIView *titleView = self.titleViews[index];
+        UIView *dotView = self.dotViews[index];
         
         titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
         
+        titleLabelW = titleLabelW > self.style.imageSize.width + 24.f ? titleLabelW : self.style.imageSize.width + 24.f;
         //标题能够滚动
         if(self.style.isScrollEnabled)
         {
-            titleLabelX = index==0 ? self.style.titleMargin * 0.5 : CGRectGetMaxX(self.titleLbls[index-1].frame)+self.style.titleMargin;
+            titleLabelX = index==0 ? self.style.titleMargin * 0.5 : CGRectGetMaxX(self.titleViews[index-1].frame)+ self.style.titleMargin;
         }
         else
         {
             titleLabelX = index==0 ? calculteMargin * 0.5 : CGRectGetMaxX(self.titleViews[index-1].frame)+calculteMargin;
         }
-        iconView.frame = CGRectMake(0.f, 5.f, self.style.imageSize.width, self.style.imageSize.height);
-        title.frame = CGRectMake(0.f, CGRectGetMaxY(iconView.frame) + self.style.titleImageSpacing, self.style.imageSize.width, self.style.titleHeight);
-
-        iconView.centerX = title.centerX;
-        titleView.frame = CGRectMake(titleLabelX, titleLabelY, self.style.imageSize.width, self.style.segmentBarHeight);
         
+        titleView.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, self.style.segmentBarHeight);
+        iconView.frame = CGRectMake(0.f, 5.f, self.style.imageSize.width, self.style.imageSize.height);
+        
+        dotView.frame = CGRectMake(self.style.imageSize.width + 12.f, 0.f, 12.f, 12.f);
+        
+        title.frame = CGRectMake(0.f, CGRectGetMaxY(iconView.frame) + self.style.titleImageSpacing, titleLabelW, self.style.titleHeight);
+        
+        iconView.centerX = title.centerX;
     }
     
     //如果titleView可以滚动设置ContentSize范围;
     if (self.style.isScrollEnabled) {
-        self.scrollView.contentSize=CGSizeMake(CGRectGetMaxX(self.titleLbls.lastObject.frame)+self.style.titleMargin*0.5, 0);
+        self.scrollView.contentSize=CGSizeMake(CGRectGetMaxX(self.titleViews.lastObject.frame)+self.style.titleMargin*0.5, 0);
     }
     
     
     //让第一个按钮处于选中状态;
     if (self.style.isNeedScale) {
         self.titleLbls.firstObject.transform= CGAffineTransformMakeScale(self.style.maxScale, self.style.maxScale);
+    }
+    
+    
+    //决定是否显示小红点
+    if(self.style.isShowDot){
+        for (int i= 0; i<self.style.dotStates.count; i++) {
+            NSNumber *flag = self.style.dotStates[i];
+            UIView *dotView = self.dotViews[i];
+            dotView.hidden = ![flag boolValue];
+        }
     }
 }
 #pragma mark 初始化TitleLabel
@@ -361,10 +399,19 @@
     if (!self.style.isScrollEnabled) {
         return;
     }
-    UILabel * targetlabel = self.titleLbls[_currentIndex];
     
-    CGFloat offsetX=targetlabel.centerX - self.scrollView.width * 0.5;
-    
+    CGFloat offsetX;
+    if (self.style.isShowImage) {
+      
+        UIView * targetView = self.titleViews[_currentIndex];
+        offsetX=targetView.centerX - self.scrollView.width * 0.5;
+       
+    }else{
+       
+        UILabel * targetlabel = self.titleLbls[_currentIndex];
+        offsetX=targetlabel.centerX - self.scrollView.width * 0.5;
+    }
+   
     if (offsetX < 0) {
         offsetX=0;
     }
@@ -375,6 +422,7 @@
     }
     
     [self.scrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+   
 }
 
 #pragma mark -- ZPSegmentBarContentDelegate
@@ -497,6 +545,12 @@
     }
     return _titleViews;
 }
+-(NSMutableArray<UIView *> *)dotViews{
+    if (!_dotViews) {
+        _dotViews = [NSMutableArray array];
+    }
+    return _dotViews;
+}
 -(UIView *)bottomLine
 {
     if (!_bottomLine) {
@@ -557,5 +611,7 @@
     [color getRed:&red green:&green blue:&blue alpha:&alpha];
     return @[@(red), @(green), @(blue), @(alpha)];
 }
-
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 @end
