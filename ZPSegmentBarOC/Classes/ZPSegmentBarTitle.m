@@ -174,7 +174,7 @@
         titleView.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, self.style.segmentBarHeight);
         iconView.frame = CGRectMake(0.f, 5.f, self.style.imageSize.width, self.style.imageSize.height);
         
-        dotView.frame = CGRectMake(self.style.imageSize.width + 12.f, 0.f, 12.f, 12.f);
+        dotView.frame = CGRectMake(self.style.imageSize.width + 12.f, 5.f, 12.f, 12.f);
         
         title.frame = CGRectMake(0.f, CGRectGetMaxY(iconView.frame) + self.style.titleImageSpacing, titleLabelW, self.style.titleHeight);
         
