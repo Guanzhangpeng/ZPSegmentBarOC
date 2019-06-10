@@ -65,13 +65,7 @@
     [self addSubview:self.scrollView];
     
     //2.0 初始化UILabel并且布局
-    if (self.style.isShowImage) {
-        
         [self setupTitleAndImage];
-        
-    }else{
-         [self setuptitlelabes];
-        //3.0 添加bottomLine并且布局
         if (self.style.isShowBottomLine) {
             [self setupBottomLine];
         }
@@ -80,26 +74,20 @@
         if (self.style.isShowCover) {
             [self setupCoverView];
         }
-    }
+
 }
 
 
 #pragma mark 初始化TitleLabel和UIimageView
-- (void)setupTitleAndImage{
+- (void) setupTitleAndImage{
     for (int i=0;i<self.titles.count;i++)
     {
         UIView *titleView = [[UIView alloc] init];
-        
-        UIView *dotView = [[UIView alloc] init];
-        dotView.backgroundColor = [UIColor redColor];
-        dotView.layer.cornerRadius = 6.f;
-        
-        
+        titleView.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
         titleView.tag=i;
         //初始化title
         UILabel * lblTitle = [[UILabel alloc] init];
         lblTitle.text=self.titles[i];
-        
         lblTitle.textAlignment=NSTextAlignmentCenter;
         lblTitle.font=self.style.titleFont;
         lblTitle.textColor = i==0? self.style.selecteColor :self.style.normalColor;
@@ -109,20 +97,28 @@
         UITapGestureRecognizer * tapGes =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(titleViewClick:)];
         [titleView addGestureRecognizer:tapGes];
        
-        //初始化icon
-        UIImageView *iconView = [[UIImageView alloc] init];
-        iconView.image = i == 0?   [UIImage imageNamed:self.style.selectedImageNames[i]]:[UIImage imageNamed:self.style.imageNames[i]];
+     
         [titleView addSubview:lblTitle];
-        [titleView addSubview:iconView];
-        [titleView addSubview:dotView];
-        
         [self.titleViews addObject:titleView];
-        [self.scrollView addSubview:titleView];
-        [self.titleIcons addObject:iconView];
         [self.titleLbls addObject:lblTitle];
-        [self.dotViews addObject:dotView];
+        [self.scrollView addSubview:titleView];
         
         
+        if (self.style.isShowImage) {
+            //初始化icon
+            UIImageView *iconView = [[UIImageView alloc] init];
+            iconView.image = i == 0?   [UIImage imageNamed:self.style.selectedImageNames[i]]:[UIImage imageNamed:self.style.imageNames[i]];
+           
+            [titleView addSubview:iconView];
+            [self.titleIcons addObject:iconView];
+        }
+        if (self.style.isShowDot) {
+            UIView *dotView = [[UIView alloc] init];
+            dotView.backgroundColor = [UIColor redColor];
+            dotView.layer.cornerRadius = 6.f;
+            [titleView addSubview:dotView];
+            [self.dotViews addObject:dotView];
+        }
     }
     
     //如果不能够滚动计算文字之间的间距;
@@ -138,29 +134,33 @@
         CGFloat totalWidth = 0 ;
         for(UILabel * title in self.titleLbls)
         {
-            titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
-            
-            totalWidth += titleLabelW;
+            if(self.style.isShowDot){
+                  titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
+                if (self.style.isShowImage) {
+                    totalWidth += titleLabelW;
+                }else{
+                    titleLabelW += 12;
+                    totalWidth += titleLabelW;
+                }
+            }else{
+                titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
+                totalWidth += titleLabelW;
+            }
             
         }
         calculteMargin = (self.width - totalWidth)/self.titleLbls.count;
         
-        if (calculteMargin < self.style.titleMargin) {
-            calculteMargin = self.style.titleMargin;
-        }
     }
     
     //布局titleLabel的frame
     for (int index=0; index<self.titleLbls.count; index++) {
         
         UILabel * title=self.titleLbls[index];
-        UIImageView *iconView = self.titleIcons[index];
         UIView *titleView = self.titleViews[index];
-        UIView *dotView = self.dotViews[index];
         
         titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
         
-        titleLabelW = titleLabelW > self.style.imageSize.width + 24.f ? titleLabelW : self.style.imageSize.width + 24.f;
+       
         //标题能够滚动
         if(self.style.isScrollEnabled)
         {
@@ -171,14 +171,40 @@
             titleLabelX = index==0 ? calculteMargin * 0.5 : CGRectGetMaxX(self.titleViews[index-1].frame)+calculteMargin;
         }
         
-        titleView.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, self.style.segmentBarHeight);
-        iconView.frame = CGRectMake(0.f, 5.f, self.style.imageSize.width, self.style.imageSize.height);
         
-        dotView.frame = CGRectMake(self.style.imageSize.width + 12.f, 5.f, 12.f, 12.f);
-        
-        title.frame = CGRectMake(0.f, CGRectGetMaxY(iconView.frame) + self.style.titleImageSpacing, titleLabelW, self.style.titleHeight);
-        
-        iconView.centerX = title.centerX;
+
+        if (self.style.isShowDot) {
+            if (self.style.isShowImage) {
+                UIImageView *iconView = self.titleIcons[index];
+                 UIView *dotView = self.dotViews[index];
+                 titleLabelW = titleLabelW > self.style.imageSize.width + 24.f ? titleLabelW : self.style.imageSize.width + 24.f;
+                titleView.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, self.style.segmentBarHeight);
+                iconView.frame = CGRectMake(0.f, 5.f, self.style.imageSize.width, self.style.imageSize.height);
+                dotView.frame = CGRectMake(self.style.imageSize.width + 12.f, 5.f, 12.f, 12.f);
+                title.frame = CGRectMake(0.f, CGRectGetMaxY(iconView.frame) + self.style.titleImageSpacing, titleLabelW, self.style.titleHeight);
+                 iconView.centerX = title.centerX;
+            }else{
+                UIView *dotView = self.dotViews[index];
+                titleView.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW+12, self.style.segmentBarHeight);
+                 title.frame = CGRectMake(0.f, titleLabelY, titleLabelW , self.style.titleHeight);
+                 dotView.frame = CGRectMake( CGRectGetMaxX(title.frame), 5.f, 12.f, 12.f);
+            }
+            
+        }else{
+            if (self.style.isShowImage) {
+                UIImageView *iconView = self.titleIcons[index];
+               
+                titleLabelW = titleLabelW > self.style.imageSize.width + 24.f ? titleLabelW : self.style.imageSize.width + 24.f;
+                titleView.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, self.style.segmentBarHeight);
+                iconView.frame = CGRectMake(0.f, 5.f, self.style.imageSize.width, self.style.imageSize.height);
+               
+                title.frame = CGRectMake(0.f, CGRectGetMaxY(iconView.frame) + self.style.titleImageSpacing, titleLabelW, self.style.titleHeight);
+                iconView.centerX = title.centerX;
+            }else{
+                titleView.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, self.style.segmentBarHeight);
+                title.frame = CGRectMake(0.f, titleLabelY, titleLabelW , self.style.titleHeight);
+            }
+        }
     }
     
     //如果titleView可以滚动设置ContentSize范围;
@@ -202,86 +228,6 @@
         }
     }
 }
-#pragma mark 初始化TitleLabel
--(void)setuptitlelabes
-{
-    for (int i=0;i<self.titles.count;i++)
-    {
-        //初始化title
-        UILabel * lblTitle = [[UILabel alloc]init];
-        lblTitle.text=self.titles[i];
-        lblTitle.tag=i;
-        lblTitle.textAlignment=NSTextAlignmentCenter;
-        lblTitle.font=self.style.titleFont;
-        lblTitle.textColor = i==0? self.style.selecteColor :self.style.normalColor;
-        lblTitle.userInteractionEnabled=YES;
-        
-        //添加点击手势;
-        UITapGestureRecognizer * tapGes =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(titleClick:)];
-        [lblTitle addGestureRecognizer:tapGes];
-        
-        [self.scrollView addSubview:lblTitle];
-        [self.titleLbls addObject:lblTitle];
-    }
-    
-    //如果不能够滚动计算文字之间的间距;
-    CGFloat calculteMargin = 0 ;
-    CGFloat titleLabelX = 0 ;
-    CGFloat titleLabelY = 0 ;
-    CGFloat titleLabelW = 0 ;
-    NSMutableDictionary * attribute=[NSMutableDictionary dictionary];
-    attribute[NSFontAttributeName]=self.style.titleFont;
-    
-    if (!self.style.isScrollEnabled)
-    {
-        CGFloat totalWidth = 0 ;
-        for(UILabel * title in self.titleLbls)
-        {
-            titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
-            
-            totalWidth += titleLabelW;
-            
-        }
-        calculteMargin = (self.width - totalWidth)/self.titleLbls.count;
-        
-        if (calculteMargin < self.style.titleMargin) {
-            calculteMargin = self.style.titleMargin;
-        }
-    }
-    
-    //布局titleLabel的frame
-    for (int index=0; index<self.titleLbls.count; index++) {
-   
-        UILabel * title=self.titleLbls[index];
-        
-        titleLabelW= [title.text boundingRectWithSize:CGSizeMake(MAXFLOAT, self.style.titleHeight) options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size.width;
-        
-        //标题能够滚动
-        if(self.style.isScrollEnabled)
-        {
-            titleLabelX = index==0 ? self.style.titleMargin * 0.5 : CGRectGetMaxX(self.titleLbls[index-1].frame)+self.style.titleMargin;
-        }
-        else
-        {
-            titleLabelX = index==0 ? calculteMargin * 0.5 : CGRectGetMaxX(self.titleLbls[index-1].frame)+calculteMargin;
-        }
-        
-        title.frame = CGRectMake(titleLabelX, titleLabelY, titleLabelW, self.style.titleHeight);
-
-    }
-    
-    //如果titleView可以滚动设置ContentSize范围;
-    if (self.style.isScrollEnabled) {
-        self.scrollView.contentSize=CGSizeMake(CGRectGetMaxX(self.titleLbls.lastObject.frame)+self.style.titleMargin*0.5, 0);
-    }
-    
-    
-    //让第一个按钮处于选中状态;
-    if (self.style.isNeedScale) {
-        self.titleLbls.firstObject.transform= CGAffineTransformMakeScale(self.style.maxScale, self.style.maxScale);
-    }
-}
-
 #pragma mark 初始化BottomLine
 -(void)setupBottomLine
 {
@@ -306,7 +252,8 @@
 - (void)titleViewClick:(UITapGestureRecognizer  *)tapGes{
     UIView * targetView =tapGes.view ;
     UILabel *targetLabel = targetView.subviews[0];
-    UIImageView *targetImageView = targetView.subviews[1];
+    
+   
     
     //如果是之前点击的按钮则不再继续执行;
     if (_currentIndex == targetView.tag) {
@@ -318,9 +265,13 @@
     sourceLabel.textColor = self.style.normalColor;
     targetLabel.textColor = self.style.selecteColor;
     
-    UIImageView *sourceImageView = self.titleIcons[_currentIndex];
-    sourceImageView.image = [UIImage imageNamed:self.style.imageNames[_currentIndex]];
-    targetImageView.image = [UIImage imageNamed:self.style.selectedImageNames[targetView.tag]];
+    if (self.style.isShowImage){
+         UIImageView *targetImageView = targetView.subviews[1];
+        UIImageView *sourceImageView = self.titleIcons[_currentIndex];
+        sourceImageView.image = [UIImage imageNamed:self.style.imageNames[_currentIndex]];
+        targetImageView.image = [UIImage imageNamed:self.style.selectedImageNames[targetView.tag]];
+
+    }
 
     //执行代理方法
     if ([self.delegate respondsToSelector:@selector(segmentBarTitle:fromIndex:toIndex:)]) {
@@ -407,9 +358,8 @@
         offsetX=targetView.centerX - self.scrollView.width * 0.5;
        
     }else{
-       
-        UILabel * targetlabel = self.titleLbls[_currentIndex];
-        offsetX=targetlabel.centerX - self.scrollView.width * 0.5;
+       UIView * targetView = self.titleViews[_currentIndex];
+        offsetX=targetView.centerX - self.scrollView.width * 0.5;
     }
    
     if (offsetX < 0) {

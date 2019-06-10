@@ -31,21 +31,22 @@
     }
     
     ZPSegmentBarStyle * style=[[ZPSegmentBarStyle alloc] init];
-//    style.isScrollEnabled=NO;//导航条是否可以滚动,默认YES;
-//    style.isShowCover=YES;//导航条是否显示遮盖效果,默认YES;
+    style.isScrollEnabled=NO;//导航条是否可以滚动,默认YES;
+    style.isShowCover=NO;//导航条是否显示遮盖效果,默认YES;
 //    style.coverViewMargin=6;//遮盖间距;
-//    style.isShowBottomLine=YES;//导航条下方是否显示BottomLine,默认YES;
+    style.isShowBottomLine=NO;//导航条下方是否显示BottomLine,默认YES;
 //    style.bottomLineColor=[UIColor orangeColor];//BottomLine 的颜色;
 //    style.isNeedScale=YES;//导航条是否有放大效果,默认YES;
     
-    style.isShowImage = YES;
-    style.imageNames = @[@"message_sys",@"message_tz",@"message_sys",@"message_tz"];
-    style.selectedImageNames = @[@"message_sys_h",@"message_tz_h",@"message_sys_h",@"message_tz_h"];
-    style.imageSize = CGSizeMake(40.f, 40.f);
-    style.segmentBarHeight = 70.f;
+//    style.isShowImage = YES;
+//    style.imageNames = @[@"message_sys",@"message_tz",@"message_sys",@"message_tz"];
+//    style.selectedImageNames = @[@"message_sys_h",@"message_tz_h",@"message_sys_h",@"message_tz_h"];
+//    style.imageSize = CGSizeMake(40.f, 40.f);
+    
+    style.segmentBarHeight = 44.f;
     style.isNeedScale = NO;
     style.isShowDot = YES;
-    style.titleHeight = 18.f;
+    style.titleHeight = 44.f;
     style.dotStates = @[@NO,@YES,@NO,@NO];
     style.titleMargin = 50.f;
     self.style = style;

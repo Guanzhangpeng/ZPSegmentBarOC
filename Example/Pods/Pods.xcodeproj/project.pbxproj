@@ -7,331 +7,328 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05A12537588049BD1BB6293AEEE3050D /* Pods-ZPSegmentBarOC_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99125C782CAF563F2819E3E370A77913 /* Pods-ZPSegmentBarOC_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		097FB2AF8BAA4CCE0277BD72AC8E4965 /* Pods-ZPSegmentBarOC_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C45BEB2F7916F23F0EEDAF7845285E8 /* Pods-ZPSegmentBarOC_Example-dummy.m */; };
-		0D2D3288A4C7A53B3FB732024F10D436 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		1F532BD8AF0D8109EF3F994370DCDB3B /* ZPSegmentBarContent.h in Headers */ = {isa = PBXBuildFile; fileRef = BABF75629D3962F6A0D5D13661D544F8 /* ZPSegmentBarContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A207F75C01865CF8916E9C01C3F33E5 /* ZPSegmentBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = B11CA9BB4C3211866F2BB18582D65519 /* ZPSegmentBarStyle.m */; };
-		3D89B0E1584ADC5628E0C854C9E90DB7 /* Pods-ZPSegmentBarOC_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B756656C470352EBCBE072D7863C4C27 /* Pods-ZPSegmentBarOC_Tests-dummy.m */; };
-		3F0FF089C8994561B3F613EE08823C76 /* ZPSegmentBarOC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E165F8057DA72077EEFA338EE4806EAD /* ZPSegmentBarOC-dummy.m */; };
-		45011DF0B7E278C4EA81B44D9A32F029 /* ZPSegmentBarTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA7F434CB4586FDF3D068A96716F986 /* ZPSegmentBarTitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D4CFD8A590B204892E3D4108A801482 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		567D818546066A0376E1470897D3F45E /* ZPSegmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = AD8BF38E649C2BAF44EB7FC588A53CA8 /* ZPSegmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		574BDBE21E13CD61BF322B1BE1A9A5BE /* Pods-ZPSegmentBarOC_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4AA1CF3BB19E4BFE248B8CE667075D3 /* Pods-ZPSegmentBarOC_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A3D1479AFC35C2ABC0CA78076836446 /* UIView+ZPSegmentBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E37E0EFB6E9ED38D53C2948A3C5B40B /* UIView+ZPSegmentBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6696903512074C231184DD8696D5BDEF /* ZPSegmentBarTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = AB29CAEB73302C5A5D7B62B62A776B2B /* ZPSegmentBarTitle.m */; };
-		8101BCBBC30994617162D229F4933ACC /* ZPSegmentBarContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B41D81BAB0B81CBEB366573C9F0D10 /* ZPSegmentBarContent.m */; };
-		AC08A96BDD0FE552FCB61C244DE68DA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		B4C2569352FF223A917414CE936D5734 /* ZPSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFC6CC937BD69E77EF28F5AAAE55B5E /* ZPSegmentView.m */; };
-		C17BC68A2E97111141CF8DC999DD68F8 /* UIView+ZPSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7AC1E4411638BDA0B5397690A91312 /* UIView+ZPSegmentBar.m */; };
-		C45DFACCE830DF8DE58227A838076847 /* ZPSegmentBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C408BE46BFB28C86B408410D5567D71 /* ZPSegmentBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C50BD0FB846CA6CAA44009EC3B2093CD /* ZPSegmentBarOC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D92BA7F8D811D8C8DBF9F2F6C60C7F29 /* ZPSegmentBarOC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CA804B0FFE5763DACB1334A156711D7 /* UIView+ZPSegmentBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 488F12598E280F72103A03AFBA4BC6EA /* UIView+ZPSegmentBar.m */; };
+		181FFCD987F8161030A88D51C1E09B59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		2772ED5B852A8ED038BB2C1F636CA398 /* Pods-ZPSegmentBarOC_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BC24C9C244AAF64B3A0EBAF355D6A4 /* Pods-ZPSegmentBarOC_Example-dummy.m */; };
+		2FA70EACF4C4250582F2DE7AD7550FAD /* Pods-ZPSegmentBarOC_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FB7F360D80E1A8754F759E5D9D6BE /* Pods-ZPSegmentBarOC_Tests-dummy.m */; };
+		3AD7EC759EEA0B5AB4F69709B8591BB1 /* Pods-ZPSegmentBarOC_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 56BD984891401FFA6C8A0F64D9BAE93D /* Pods-ZPSegmentBarOC_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C88975FA48DFFC8DB1A8A2C1220FAEC /* ZPSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB7AD13A3432831A32426A2A1EE447 /* ZPSegmentView.m */; };
+		4BD517B1FC10A7EB615309BF094DC02A /* ZPSegmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 66677301B3898E12F9466C030F143B0D /* ZPSegmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9474126B25F293ECAEC28848D13D6E3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		A9620A8EF4DE554149A7EB685BA3DDAF /* ZPSegmentBarContent.m in Sources */ = {isa = PBXBuildFile; fileRef = F17BA050F7F4924FFB88BE19F98EDB5B /* ZPSegmentBarContent.m */; };
+		ABA8881C00493E74783DC7290158A386 /* ZPSegmentBarTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D620734880938DECD85FA9422A61B12 /* ZPSegmentBarTitle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B84F65BC446DAE524F4DD67485E9DEA3 /* ZPSegmentBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D8DF4A42DF4B3C564CD4EC374619B9D /* ZPSegmentBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2114FD2F4A74F1AA252B11AA5F7035F /* UIView+ZPSegmentBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFF66E71AABA7AA42952BBA8BDC78E6 /* UIView+ZPSegmentBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D167197A6D9C2622AF4AFC7567373D80 /* ZPSegmentBarOC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8230D99E0A28AA40F9F79F36B11358 /* ZPSegmentBarOC-dummy.m */; };
+		D190993CF365C05892A361B79869BB85 /* ZPSegmentBarContent.h in Headers */ = {isa = PBXBuildFile; fileRef = CD55929CCDA68BD83CA83EC6D5875ACF /* ZPSegmentBarContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D34A897EBCBA9259FF046EE91B46AC99 /* Pods-ZPSegmentBarOC_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37967C4E75896C825103867C3ADB1314 /* Pods-ZPSegmentBarOC_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC091CD162F9B3F1E921CEF7AA563167 /* ZPSegmentBarOC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C714495022B0E5F4D7906AC9787B1A6 /* ZPSegmentBarOC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E461833B06475D85A403CB70DFF3F48C /* ZPSegmentBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BCD56855A94E7DFEDF0EF7FCC7DD41 /* ZPSegmentBarStyle.m */; };
+		F93C03BC8BA9697D0A9DD525AE532C78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		FCBC87A7A31CA707CAEC4212AC1BDD2D /* ZPSegmentBarTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA0B4B41F7F8B316A9A412E590D2E7F /* ZPSegmentBarTitle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4095D637D84D831332073C2B55D2FD8E /* PBXContainerItemProxy */ = {
+		0994646DF93A45AC8201DCDD835B37B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 923C87515172BC929EC702D3ABCD2F16;
+			remoteGlobalIDString = 1EF7C5132C32A0F4BAC6CA37F7A1A33A;
 			remoteInfo = "Pods-ZPSegmentBarOC_Example";
 		};
-		4509F1E4AFB7436249D632BE7E9E8DB1 /* PBXContainerItemProxy */ = {
+		1BEA55085775577DDD14F6D837C6D16B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FF2DE0E4C1B700CA91D3609295A161C0;
+			remoteGlobalIDString = CFDCD81B39F02DEFDC7FDA2B0DA52E3B;
 			remoteInfo = ZPSegmentBarOC;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		127E54D2B9F193EF90342E0F5240EB00 /* Pods-ZPSegmentBarOC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZPSegmentBarOC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		227EDC4EFE3656ECD8878B797920026D /* Pods-ZPSegmentBarOC_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZPSegmentBarOC_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		36B41D81BAB0B81CBEB366573C9F0D10 /* ZPSegmentBarContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZPSegmentBarContent.m; path = ZPSegmentBarOC/Classes/ZPSegmentBarContent.m; sourceTree = "<group>"; };
-		3E7E08413E052CFDC8803651FEE179D5 /* Pods-ZPSegmentBarOC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZPSegmentBarOC_Example.release.xcconfig"; sourceTree = "<group>"; };
-		465091A88477D51F6931926A0C90EA60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B7AC1E4411638BDA0B5397690A91312 /* UIView+ZPSegmentBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ZPSegmentBar.m"; path = "ZPSegmentBarOC/Classes/UIView+ZPSegmentBar.m"; sourceTree = "<group>"; };
-		4C408BE46BFB28C86B408410D5567D71 /* ZPSegmentBarStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZPSegmentBarStyle.h; path = ZPSegmentBarOC/Classes/ZPSegmentBarStyle.h; sourceTree = "<group>"; };
-		4E82333765E04ACE8CF68E5034778414 /* Pods-ZPSegmentBarOC_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZPSegmentBarOC_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4F3DCC0391110A1B388FB5DF47AA3156 /* Pods-ZPSegmentBarOC_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZPSegmentBarOC_Example-frameworks.sh"; sourceTree = "<group>"; };
-		513EB3099B82DB431B447C47C920FA96 /* ZPSegmentBarOC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = ZPSegmentBarOC.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		55F0967DD6BC4948E275F5F45F7CFE6A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5E37E0EFB6E9ED38D53C2948A3C5B40B /* UIView+ZPSegmentBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ZPSegmentBar.h"; path = "ZPSegmentBarOC/Classes/UIView+ZPSegmentBar.h"; sourceTree = "<group>"; };
-		6D2A1DAF568C2D134D072EF3E3601D6C /* ZPSegmentBarOC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZPSegmentBarOC.modulemap; sourceTree = "<group>"; };
-		6F2773EB63DD50A54A48349E059EA838 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		6F93564D86DB1B33D9105AB83D369A69 /* Pods-ZPSegmentBarOC_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZPSegmentBarOC_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		77BE8B70A6C67CA27C411542FE173A66 /* Pods-ZPSegmentBarOC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZPSegmentBarOC_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7ED9A6E3EE5A37F8E715890563511342 /* ZPSegmentBarOC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZPSegmentBarOC-prefix.pch"; sourceTree = "<group>"; };
-		8C45BEB2F7916F23F0EEDAF7845285E8 /* Pods-ZPSegmentBarOC_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZPSegmentBarOC_Example-dummy.m"; sourceTree = "<group>"; };
-		8D1D6BC1AFB56EB30A55CCFD41671096 /* Pods-ZPSegmentBarOC_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZPSegmentBarOC_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		8FA7F434CB4586FDF3D068A96716F986 /* ZPSegmentBarTitle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZPSegmentBarTitle.h; path = ZPSegmentBarOC/Classes/ZPSegmentBarTitle.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9545667DE7F1304910E7DB63CB3FCE2D /* Pods-ZPSegmentBarOC_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZPSegmentBarOC_Example-resources.sh"; sourceTree = "<group>"; };
-		967312711C3602B903224A4355C7B19C /* Pods-ZPSegmentBarOC_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZPSegmentBarOC_Example.modulemap"; sourceTree = "<group>"; };
-		99125C782CAF563F2819E3E370A77913 /* Pods-ZPSegmentBarOC_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZPSegmentBarOC_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A6087BC66466C3A4A67D96D770ADE807 /* ZPSegmentBarOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZPSegmentBarOC.framework; path = ZPSegmentBarOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A729ED8994A5A393D4E4A1A01F737653 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		A9DFC89BD3022EFBAA34780EB3858700 /* Pods-ZPSegmentBarOC_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZPSegmentBarOC_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		AB29CAEB73302C5A5D7B62B62A776B2B /* ZPSegmentBarTitle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZPSegmentBarTitle.m; path = ZPSegmentBarOC/Classes/ZPSegmentBarTitle.m; sourceTree = "<group>"; };
-		ACABA3D15A9E986AFC1D89ED2395AF40 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD8BF38E649C2BAF44EB7FC588A53CA8 /* ZPSegmentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZPSegmentView.h; path = ZPSegmentBarOC/Classes/ZPSegmentView.h; sourceTree = "<group>"; };
-		B11CA9BB4C3211866F2BB18582D65519 /* ZPSegmentBarStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZPSegmentBarStyle.m; path = ZPSegmentBarOC/Classes/ZPSegmentBarStyle.m; sourceTree = "<group>"; };
-		B756656C470352EBCBE072D7863C4C27 /* Pods-ZPSegmentBarOC_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZPSegmentBarOC_Tests-dummy.m"; sourceTree = "<group>"; };
-		BABF75629D3962F6A0D5D13661D544F8 /* ZPSegmentBarContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZPSegmentBarContent.h; path = ZPSegmentBarOC/Classes/ZPSegmentBarContent.h; sourceTree = "<group>"; };
-		BEFC6CC937BD69E77EF28F5AAAE55B5E /* ZPSegmentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZPSegmentView.m; path = ZPSegmentBarOC/Classes/ZPSegmentView.m; sourceTree = "<group>"; };
-		C47001FCCCD384EA26E605423E3656F3 /* Pods-ZPSegmentBarOC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZPSegmentBarOC_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CBA1DFDB2E4060BD2A5438D9A00F0941 /* ZPSegmentBarOC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZPSegmentBarOC.xcconfig; sourceTree = "<group>"; };
-		D045610CD59DDD51534762CC2004F02D /* Pods_ZPSegmentBarOC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZPSegmentBarOC_Tests.framework; path = "Pods-ZPSegmentBarOC_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D92BA7F8D811D8C8DBF9F2F6C60C7F29 /* ZPSegmentBarOC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZPSegmentBarOC-umbrella.h"; sourceTree = "<group>"; };
-		E165F8057DA72077EEFA338EE4806EAD /* ZPSegmentBarOC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZPSegmentBarOC-dummy.m"; sourceTree = "<group>"; };
-		E22A52387D01FB7A6F0283CB4E2F794F /* Pods-ZPSegmentBarOC_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZPSegmentBarOC_Tests.modulemap"; sourceTree = "<group>"; };
-		E4AA1CF3BB19E4BFE248B8CE667075D3 /* Pods-ZPSegmentBarOC_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZPSegmentBarOC_Example-umbrella.h"; sourceTree = "<group>"; };
-		E74B8F7381E766C3CC87DAA4A0619CBF /* Pods_ZPSegmentBarOC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZPSegmentBarOC_Example.framework; path = "Pods-ZPSegmentBarOC_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFCB05EFC71388671B54055C808C8FD3 /* Pods-ZPSegmentBarOC_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZPSegmentBarOC_Tests-resources.sh"; sourceTree = "<group>"; };
+		0AAE16AE9A844DD25CFA5F9A316DA90B /* Pods-ZPSegmentBarOC_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZPSegmentBarOC_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1038EE308AD199428D9E5B619684EDCD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1C714495022B0E5F4D7906AC9787B1A6 /* ZPSegmentBarOC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZPSegmentBarOC-umbrella.h"; sourceTree = "<group>"; };
+		2B8230D99E0A28AA40F9F79F36B11358 /* ZPSegmentBarOC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZPSegmentBarOC-dummy.m"; sourceTree = "<group>"; };
+		36BC24C9C244AAF64B3A0EBAF355D6A4 /* Pods-ZPSegmentBarOC_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZPSegmentBarOC_Example-dummy.m"; sourceTree = "<group>"; };
+		37967C4E75896C825103867C3ADB1314 /* Pods-ZPSegmentBarOC_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZPSegmentBarOC_Example-umbrella.h"; sourceTree = "<group>"; };
+		41B793DCEB63994C00E3F36B7C539FD6 /* Pods-ZPSegmentBarOC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZPSegmentBarOC_Example.release.xcconfig"; sourceTree = "<group>"; };
+		488F12598E280F72103A03AFBA4BC6EA /* UIView+ZPSegmentBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ZPSegmentBar.m"; path = "ZPSegmentBarOC/Classes/UIView+ZPSegmentBar.m"; sourceTree = "<group>"; };
+		56BD984891401FFA6C8A0F64D9BAE93D /* Pods-ZPSegmentBarOC_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZPSegmentBarOC_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5920A8AB54B7E9C9E144CFB9D8292D92 /* Pods-ZPSegmentBarOC_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZPSegmentBarOC_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		66677301B3898E12F9466C030F143B0D /* ZPSegmentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZPSegmentView.h; path = ZPSegmentBarOC/Classes/ZPSegmentView.h; sourceTree = "<group>"; };
+		6A8F677170AC2FD191E903C9F34E8949 /* Pods-ZPSegmentBarOC_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZPSegmentBarOC_Example-frameworks.sh"; sourceTree = "<group>"; };
+		6BE32FF5B006DBCD4E9BB3E3FEC3E339 /* ZPSegmentBarOC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZPSegmentBarOC.modulemap; sourceTree = "<group>"; };
+		6D8DF4A42DF4B3C564CD4EC374619B9D /* ZPSegmentBarStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZPSegmentBarStyle.h; path = ZPSegmentBarOC/Classes/ZPSegmentBarStyle.h; sourceTree = "<group>"; };
+		6EFF66E71AABA7AA42952BBA8BDC78E6 /* UIView+ZPSegmentBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ZPSegmentBar.h"; path = "ZPSegmentBarOC/Classes/UIView+ZPSegmentBar.h"; sourceTree = "<group>"; };
+		7399FE1635C91CA342A41A9C8DC7159B /* Pods-ZPSegmentBarOC_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZPSegmentBarOC_Example.modulemap"; sourceTree = "<group>"; };
+		76B526EDE79F55595FF1E549B1179B20 /* Pods_ZPSegmentBarOC_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZPSegmentBarOC_Tests.framework; path = "Pods-ZPSegmentBarOC_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BEB7AD13A3432831A32426A2A1EE447 /* ZPSegmentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZPSegmentView.m; path = ZPSegmentBarOC/Classes/ZPSegmentView.m; sourceTree = "<group>"; };
+		7D19101DF124F085A70E6085B3833124 /* ZPSegmentBarOC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZPSegmentBarOC.xcconfig; sourceTree = "<group>"; };
+		8D620734880938DECD85FA9422A61B12 /* ZPSegmentBarTitle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZPSegmentBarTitle.h; path = ZPSegmentBarOC/Classes/ZPSegmentBarTitle.h; sourceTree = "<group>"; };
+		8EF1ECA672F65F29C9C98A769B70039F /* ZPSegmentBarOC-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZPSegmentBarOC-Info.plist"; sourceTree = "<group>"; };
+		914CFB3AFEDB54908602EFE3AB146B9C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		99848EA652F8E402D2457910173812CB /* Pods-ZPSegmentBarOC_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZPSegmentBarOC_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A4FB7F360D80E1A8754F759E5D9D6BE /* Pods-ZPSegmentBarOC_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZPSegmentBarOC_Tests-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EC4C63734BA5BEB1636E97EA5AF3ABB /* Pods-ZPSegmentBarOC_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZPSegmentBarOC_Example-Info.plist"; sourceTree = "<group>"; };
+		9F17D37ACF20A99180A7C800F966ECA9 /* Pods-ZPSegmentBarOC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZPSegmentBarOC_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		AA71478D45168B1ED6AE7917E217EFDD /* Pods_ZPSegmentBarOC_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZPSegmentBarOC_Example.framework; path = "Pods-ZPSegmentBarOC_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB27BF8CC89150DD9895D64B36141C32 /* ZPSegmentBarOC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZPSegmentBarOC.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B177E0A6CA0CAF38817593D801C5D9A8 /* Pods-ZPSegmentBarOC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZPSegmentBarOC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFA0B4B41F7F8B316A9A412E590D2E7F /* ZPSegmentBarTitle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZPSegmentBarTitle.m; path = ZPSegmentBarOC/Classes/ZPSegmentBarTitle.m; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CD55929CCDA68BD83CA83EC6D5875ACF /* ZPSegmentBarContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZPSegmentBarContent.h; path = ZPSegmentBarOC/Classes/ZPSegmentBarContent.h; sourceTree = "<group>"; };
+		CEB06335B9C615CE162AE0D1EF7F2EBB /* ZPSegmentBarOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZPSegmentBarOC.framework; path = ZPSegmentBarOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF84410AB8E2ABADB0E76EFE1319F531 /* Pods-ZPSegmentBarOC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZPSegmentBarOC_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D94F913615A3435231FFAE07F29DCDEC /* ZPSegmentBarOC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZPSegmentBarOC-prefix.pch"; sourceTree = "<group>"; };
+		E96295A63EADA28B71B48A2D6F0A64E3 /* Pods-ZPSegmentBarOC_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZPSegmentBarOC_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EF1C914CF8BCE8B450A2B32962918ED7 /* Pods-ZPSegmentBarOC_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZPSegmentBarOC_Tests-Info.plist"; sourceTree = "<group>"; };
+		F17BA050F7F4924FFB88BE19F98EDB5B /* ZPSegmentBarContent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZPSegmentBarContent.m; path = ZPSegmentBarOC/Classes/ZPSegmentBarContent.m; sourceTree = "<group>"; };
+		F4BCD56855A94E7DFEDF0EF7FCC7DD41 /* ZPSegmentBarStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZPSegmentBarStyle.m; path = ZPSegmentBarOC/Classes/ZPSegmentBarStyle.m; sourceTree = "<group>"; };
+		F71CB8766AE948C19A06DB37E15BE221 /* Pods-ZPSegmentBarOC_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZPSegmentBarOC_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1189ED68511333DA54600C10DA25824E /* Frameworks */ = {
+		6E15BE3C313BDD1772EC9A66F6649B6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D4CFD8A590B204892E3D4108A801482 /* Foundation.framework in Frameworks */,
+				F93C03BC8BA9697D0A9DD525AE532C78 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		35A230D4F253595B8987EC835FF47623 /* Frameworks */ = {
+		9006AD9502998337D70378155B7474F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC08A96BDD0FE552FCB61C244DE68DA5 /* Foundation.framework in Frameworks */,
+				181FFCD987F8161030A88D51C1E09B59 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36E6F8EB543C558BE96E1A1771D0D139 /* Frameworks */ = {
+		C847E22EC6B1A97E64B459ACF8DA3378 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D2D3288A4C7A53B3FB732024F10D436 /* Foundation.framework in Frameworks */,
+				9474126B25F293ECAEC28848D13D6E3A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2022D66D719BB8048385B8E555A45E8D /* Development Pods */ = {
+		1DE7342BA3890C6ED32E6AF5CA558CB1 /* ZPSegmentBarOC */ = {
 			isa = PBXGroup;
 			children = (
-				D80F79312719D3128E6CCCB2ABF82C5F /* ZPSegmentBarOC */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		40EFE02EF32B6DD49C939FFDA1E94696 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				465091A88477D51F6931926A0C90EA60 /* Info.plist */,
-				6D2A1DAF568C2D134D072EF3E3601D6C /* ZPSegmentBarOC.modulemap */,
-				CBA1DFDB2E4060BD2A5438D9A00F0941 /* ZPSegmentBarOC.xcconfig */,
-				E165F8057DA72077EEFA338EE4806EAD /* ZPSegmentBarOC-dummy.m */,
-				7ED9A6E3EE5A37F8E715890563511342 /* ZPSegmentBarOC-prefix.pch */,
-				D92BA7F8D811D8C8DBF9F2F6C60C7F29 /* ZPSegmentBarOC-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ZPSegmentBarOC";
-			sourceTree = "<group>";
-		};
-		582A95EFC18BE9DED3ADF38DC4023C91 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E74B8F7381E766C3CC87DAA4A0619CBF /* Pods_ZPSegmentBarOC_Example.framework */,
-				D045610CD59DDD51534762CC2004F02D /* Pods_ZPSegmentBarOC_Tests.framework */,
-				A6087BC66466C3A4A67D96D770ADE807 /* ZPSegmentBarOC.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		740331F18E357CB0B31FCD1E5C312B61 /* Pods-ZPSegmentBarOC_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				ACABA3D15A9E986AFC1D89ED2395AF40 /* Info.plist */,
-				E22A52387D01FB7A6F0283CB4E2F794F /* Pods-ZPSegmentBarOC_Tests.modulemap */,
-				4E82333765E04ACE8CF68E5034778414 /* Pods-ZPSegmentBarOC_Tests-acknowledgements.markdown */,
-				6F93564D86DB1B33D9105AB83D369A69 /* Pods-ZPSegmentBarOC_Tests-acknowledgements.plist */,
-				B756656C470352EBCBE072D7863C4C27 /* Pods-ZPSegmentBarOC_Tests-dummy.m */,
-				8D1D6BC1AFB56EB30A55CCFD41671096 /* Pods-ZPSegmentBarOC_Tests-frameworks.sh */,
-				FFCB05EFC71388671B54055C808C8FD3 /* Pods-ZPSegmentBarOC_Tests-resources.sh */,
-				99125C782CAF563F2819E3E370A77913 /* Pods-ZPSegmentBarOC_Tests-umbrella.h */,
-				127E54D2B9F193EF90342E0F5240EB00 /* Pods-ZPSegmentBarOC_Tests.debug.xcconfig */,
-				C47001FCCCD384EA26E605423E3656F3 /* Pods-ZPSegmentBarOC_Tests.release.xcconfig */,
-			);
-			name = "Pods-ZPSegmentBarOC_Tests";
-			path = "Target Support Files/Pods-ZPSegmentBarOC_Tests";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				2022D66D719BB8048385B8E555A45E8D /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				582A95EFC18BE9DED3ADF38DC4023C91 /* Products */,
-				E37D8C620830B2AF7BDD7A0C6B3F4C27 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5E0D919E635D23B70123790B8308F8EF /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CE6BB3CDC02798A276FAD3958F310480 /* Pods-ZPSegmentBarOC_Example */ = {
-			isa = PBXGroup;
-			children = (
-				55F0967DD6BC4948E275F5F45F7CFE6A /* Info.plist */,
-				967312711C3602B903224A4355C7B19C /* Pods-ZPSegmentBarOC_Example.modulemap */,
-				227EDC4EFE3656ECD8878B797920026D /* Pods-ZPSegmentBarOC_Example-acknowledgements.markdown */,
-				A9DFC89BD3022EFBAA34780EB3858700 /* Pods-ZPSegmentBarOC_Example-acknowledgements.plist */,
-				8C45BEB2F7916F23F0EEDAF7845285E8 /* Pods-ZPSegmentBarOC_Example-dummy.m */,
-				4F3DCC0391110A1B388FB5DF47AA3156 /* Pods-ZPSegmentBarOC_Example-frameworks.sh */,
-				9545667DE7F1304910E7DB63CB3FCE2D /* Pods-ZPSegmentBarOC_Example-resources.sh */,
-				E4AA1CF3BB19E4BFE248B8CE667075D3 /* Pods-ZPSegmentBarOC_Example-umbrella.h */,
-				77BE8B70A6C67CA27C411542FE173A66 /* Pods-ZPSegmentBarOC_Example.debug.xcconfig */,
-				3E7E08413E052CFDC8803651FEE179D5 /* Pods-ZPSegmentBarOC_Example.release.xcconfig */,
-			);
-			name = "Pods-ZPSegmentBarOC_Example";
-			path = "Target Support Files/Pods-ZPSegmentBarOC_Example";
-			sourceTree = "<group>";
-		};
-		D80F79312719D3128E6CCCB2ABF82C5F /* ZPSegmentBarOC */ = {
-			isa = PBXGroup;
-			children = (
-				5E37E0EFB6E9ED38D53C2948A3C5B40B /* UIView+ZPSegmentBar.h */,
-				4B7AC1E4411638BDA0B5397690A91312 /* UIView+ZPSegmentBar.m */,
-				BABF75629D3962F6A0D5D13661D544F8 /* ZPSegmentBarContent.h */,
-				36B41D81BAB0B81CBEB366573C9F0D10 /* ZPSegmentBarContent.m */,
-				4C408BE46BFB28C86B408410D5567D71 /* ZPSegmentBarStyle.h */,
-				B11CA9BB4C3211866F2BB18582D65519 /* ZPSegmentBarStyle.m */,
-				8FA7F434CB4586FDF3D068A96716F986 /* ZPSegmentBarTitle.h */,
-				AB29CAEB73302C5A5D7B62B62A776B2B /* ZPSegmentBarTitle.m */,
-				AD8BF38E649C2BAF44EB7FC588A53CA8 /* ZPSegmentView.h */,
-				BEFC6CC937BD69E77EF28F5AAAE55B5E /* ZPSegmentView.m */,
-				EACFAD5FDF75E7FB8D6DB2A97CE2487C /* Pod */,
-				40EFE02EF32B6DD49C939FFDA1E94696 /* Support Files */,
+				6EFF66E71AABA7AA42952BBA8BDC78E6 /* UIView+ZPSegmentBar.h */,
+				488F12598E280F72103A03AFBA4BC6EA /* UIView+ZPSegmentBar.m */,
+				CD55929CCDA68BD83CA83EC6D5875ACF /* ZPSegmentBarContent.h */,
+				F17BA050F7F4924FFB88BE19F98EDB5B /* ZPSegmentBarContent.m */,
+				6D8DF4A42DF4B3C564CD4EC374619B9D /* ZPSegmentBarStyle.h */,
+				F4BCD56855A94E7DFEDF0EF7FCC7DD41 /* ZPSegmentBarStyle.m */,
+				8D620734880938DECD85FA9422A61B12 /* ZPSegmentBarTitle.h */,
+				BFA0B4B41F7F8B316A9A412E590D2E7F /* ZPSegmentBarTitle.m */,
+				66677301B3898E12F9466C030F143B0D /* ZPSegmentView.h */,
+				7BEB7AD13A3432831A32426A2A1EE447 /* ZPSegmentView.m */,
+				5247DB004C94F52DA89611945CE08D5E /* Pod */,
+				262429A094500017DF20154F7F34876E /* Support Files */,
 			);
 			name = ZPSegmentBarOC;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		E37D8C620830B2AF7BDD7A0C6B3F4C27 /* Targets Support Files */ = {
+		262429A094500017DF20154F7F34876E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE6BB3CDC02798A276FAD3958F310480 /* Pods-ZPSegmentBarOC_Example */,
-				740331F18E357CB0B31FCD1E5C312B61 /* Pods-ZPSegmentBarOC_Tests */,
+				6BE32FF5B006DBCD4E9BB3E3FEC3E339 /* ZPSegmentBarOC.modulemap */,
+				7D19101DF124F085A70E6085B3833124 /* ZPSegmentBarOC.xcconfig */,
+				2B8230D99E0A28AA40F9F79F36B11358 /* ZPSegmentBarOC-dummy.m */,
+				8EF1ECA672F65F29C9C98A769B70039F /* ZPSegmentBarOC-Info.plist */,
+				D94F913615A3435231FFAE07F29DCDEC /* ZPSegmentBarOC-prefix.pch */,
+				1C714495022B0E5F4D7906AC9787B1A6 /* ZPSegmentBarOC-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ZPSegmentBarOC";
+			sourceTree = "<group>";
+		};
+		33C2CB04B6B79ABA08057EEF4A0C08FD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DE7342BA3890C6ED32E6AF5CA558CB1 /* ZPSegmentBarOC */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5247DB004C94F52DA89611945CE08D5E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				914CFB3AFEDB54908602EFE3AB146B9C /* LICENSE */,
+				1038EE308AD199428D9E5B619684EDCD /* README.md */,
+				AB27BF8CC89150DD9895D64B36141C32 /* ZPSegmentBarOC.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		91C7C41C4359CEB279D3A90F18A1888C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F25035F33E18AFF5D699CF76E02B7223 /* Pods-ZPSegmentBarOC_Example */,
+				AA9F8248E6FDA5280B24FFE86A0554E7 /* Pods-ZPSegmentBarOC_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EACFAD5FDF75E7FB8D6DB2A97CE2487C /* Pod */ = {
+		99B4B69E2EDBA57981D9B491853CFD17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6F2773EB63DD50A54A48349E059EA838 /* LICENSE */,
-				A729ED8994A5A393D4E4A1A01F737653 /* README.md */,
-				513EB3099B82DB431B447C47C920FA96 /* ZPSegmentBarOC.podspec */,
+				AA71478D45168B1ED6AE7917E217EFDD /* Pods_ZPSegmentBarOC_Example.framework */,
+				76B526EDE79F55595FF1E549B1179B20 /* Pods_ZPSegmentBarOC_Tests.framework */,
+				CEB06335B9C615CE162AE0D1EF7F2EBB /* ZPSegmentBarOC.framework */,
 			);
-			name = Pod;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		AA9F8248E6FDA5280B24FFE86A0554E7 /* Pods-ZPSegmentBarOC_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F71CB8766AE948C19A06DB37E15BE221 /* Pods-ZPSegmentBarOC_Tests.modulemap */,
+				0AAE16AE9A844DD25CFA5F9A316DA90B /* Pods-ZPSegmentBarOC_Tests-acknowledgements.markdown */,
+				5920A8AB54B7E9C9E144CFB9D8292D92 /* Pods-ZPSegmentBarOC_Tests-acknowledgements.plist */,
+				9A4FB7F360D80E1A8754F759E5D9D6BE /* Pods-ZPSegmentBarOC_Tests-dummy.m */,
+				EF1C914CF8BCE8B450A2B32962918ED7 /* Pods-ZPSegmentBarOC_Tests-Info.plist */,
+				56BD984891401FFA6C8A0F64D9BAE93D /* Pods-ZPSegmentBarOC_Tests-umbrella.h */,
+				B177E0A6CA0CAF38817593D801C5D9A8 /* Pods-ZPSegmentBarOC_Tests.debug.xcconfig */,
+				CF84410AB8E2ABADB0E76EFE1319F531 /* Pods-ZPSegmentBarOC_Tests.release.xcconfig */,
+			);
+			name = "Pods-ZPSegmentBarOC_Tests";
+			path = "Target Support Files/Pods-ZPSegmentBarOC_Tests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				33C2CB04B6B79ABA08057EEF4A0C08FD /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				99B4B69E2EDBA57981D9B491853CFD17 /* Products */,
+				91C7C41C4359CEB279D3A90F18A1888C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F25035F33E18AFF5D699CF76E02B7223 /* Pods-ZPSegmentBarOC_Example */ = {
+			isa = PBXGroup;
+			children = (
+				7399FE1635C91CA342A41A9C8DC7159B /* Pods-ZPSegmentBarOC_Example.modulemap */,
+				E96295A63EADA28B71B48A2D6F0A64E3 /* Pods-ZPSegmentBarOC_Example-acknowledgements.markdown */,
+				99848EA652F8E402D2457910173812CB /* Pods-ZPSegmentBarOC_Example-acknowledgements.plist */,
+				36BC24C9C244AAF64B3A0EBAF355D6A4 /* Pods-ZPSegmentBarOC_Example-dummy.m */,
+				6A8F677170AC2FD191E903C9F34E8949 /* Pods-ZPSegmentBarOC_Example-frameworks.sh */,
+				9EC4C63734BA5BEB1636E97EA5AF3ABB /* Pods-ZPSegmentBarOC_Example-Info.plist */,
+				37967C4E75896C825103867C3ADB1314 /* Pods-ZPSegmentBarOC_Example-umbrella.h */,
+				9F17D37ACF20A99180A7C800F966ECA9 /* Pods-ZPSegmentBarOC_Example.debug.xcconfig */,
+				41B793DCEB63994C00E3F36B7C539FD6 /* Pods-ZPSegmentBarOC_Example.release.xcconfig */,
+			);
+			name = "Pods-ZPSegmentBarOC_Example";
+			path = "Target Support Files/Pods-ZPSegmentBarOC_Example";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		12DEF144D67F16A34D6EE756D3889DFE /* Headers */ = {
+		081215F36A8BAAE63F95841074590566 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05A12537588049BD1BB6293AEEE3050D /* Pods-ZPSegmentBarOC_Tests-umbrella.h in Headers */,
+				D34A897EBCBA9259FF046EE91B46AC99 /* Pods-ZPSegmentBarOC_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9548CB188F34906B2AFEF029C1EEFD25 /* Headers */ = {
+		746162B81203EBF1F2B07BED6D809DD6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A3D1479AFC35C2ABC0CA78076836446 /* UIView+ZPSegmentBar.h in Headers */,
-				1F532BD8AF0D8109EF3F994370DCDB3B /* ZPSegmentBarContent.h in Headers */,
-				C50BD0FB846CA6CAA44009EC3B2093CD /* ZPSegmentBarOC-umbrella.h in Headers */,
-				C45DFACCE830DF8DE58227A838076847 /* ZPSegmentBarStyle.h in Headers */,
-				45011DF0B7E278C4EA81B44D9A32F029 /* ZPSegmentBarTitle.h in Headers */,
-				567D818546066A0376E1470897D3F45E /* ZPSegmentView.h in Headers */,
+				3AD7EC759EEA0B5AB4F69709B8591BB1 /* Pods-ZPSegmentBarOC_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A19FA031D392B4B6F713AD7DBBFFCE14 /* Headers */ = {
+		A5C35B7DB3542ACB756D46547821556A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				574BDBE21E13CD61BF322B1BE1A9A5BE /* Pods-ZPSegmentBarOC_Example-umbrella.h in Headers */,
+				C2114FD2F4A74F1AA252B11AA5F7035F /* UIView+ZPSegmentBar.h in Headers */,
+				D190993CF365C05892A361B79869BB85 /* ZPSegmentBarContent.h in Headers */,
+				DC091CD162F9B3F1E921CEF7AA563167 /* ZPSegmentBarOC-umbrella.h in Headers */,
+				B84F65BC446DAE524F4DD67485E9DEA3 /* ZPSegmentBarStyle.h in Headers */,
+				ABA8881C00493E74783DC7290158A386 /* ZPSegmentBarTitle.h in Headers */,
+				4BD517B1FC10A7EB615309BF094DC02A /* ZPSegmentView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		75BAFB65DA7A74BE9F2F26ACF8C4867D /* Pods-ZPSegmentBarOC_Tests */ = {
+		1EF7C5132C32A0F4BAC6CA37F7A1A33A /* Pods-ZPSegmentBarOC_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E3CC9EA3EF3F60AF274C45EFEB49319 /* Build configuration list for PBXNativeTarget "Pods-ZPSegmentBarOC_Tests" */;
+			buildConfigurationList = 16EE612F1918314687426769EE553F1E /* Build configuration list for PBXNativeTarget "Pods-ZPSegmentBarOC_Example" */;
 			buildPhases = (
-				A1DA87D53844AD44EF18DC2F512F0009 /* Sources */,
-				1189ED68511333DA54600C10DA25824E /* Frameworks */,
-				12DEF144D67F16A34D6EE756D3889DFE /* Headers */,
+				081215F36A8BAAE63F95841074590566 /* Headers */,
+				96A341A5FEE110E1BB77FCA1C2D1102F /* Sources */,
+				C847E22EC6B1A97E64B459ACF8DA3378 /* Frameworks */,
+				A29BCFB39692B603B278B77B18DC84CF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B082104C23C635360C0AF285B0768374 /* PBXTargetDependency */,
-			);
-			name = "Pods-ZPSegmentBarOC_Tests";
-			productName = "Pods-ZPSegmentBarOC_Tests";
-			productReference = D045610CD59DDD51534762CC2004F02D /* Pods_ZPSegmentBarOC_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		923C87515172BC929EC702D3ABCD2F16 /* Pods-ZPSegmentBarOC_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 162FF4F0B6145B2EB9F3EF8B07621CA6 /* Build configuration list for PBXNativeTarget "Pods-ZPSegmentBarOC_Example" */;
-			buildPhases = (
-				FE9130779982E1CA2BE5C623888DDC2A /* Sources */,
-				35A230D4F253595B8987EC835FF47623 /* Frameworks */,
-				A19FA031D392B4B6F713AD7DBBFFCE14 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5E5231503AC6947CA324DCB90D04D666 /* PBXTargetDependency */,
+				8DDCAAF2CE7609747AA92F33035884CA /* PBXTargetDependency */,
 			);
 			name = "Pods-ZPSegmentBarOC_Example";
 			productName = "Pods-ZPSegmentBarOC_Example";
-			productReference = E74B8F7381E766C3CC87DAA4A0619CBF /* Pods_ZPSegmentBarOC_Example.framework */;
+			productReference = AA71478D45168B1ED6AE7917E217EFDD /* Pods_ZPSegmentBarOC_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FF2DE0E4C1B700CA91D3609295A161C0 /* ZPSegmentBarOC */ = {
+		A0571D815376B3281913F4FB288913B4 /* Pods-ZPSegmentBarOC_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B9EFF9A8BAE8B5AD05A3AF51D6AE5A7 /* Build configuration list for PBXNativeTarget "ZPSegmentBarOC" */;
+			buildConfigurationList = 37CEA3A4DC53643045E0353E63C38C6B /* Build configuration list for PBXNativeTarget "Pods-ZPSegmentBarOC_Tests" */;
 			buildPhases = (
-				B61E1E78ECC625C8A9202318CE34969E /* Sources */,
-				36E6F8EB543C558BE96E1A1771D0D139 /* Frameworks */,
-				9548CB188F34906B2AFEF029C1EEFD25 /* Headers */,
+				746162B81203EBF1F2B07BED6D809DD6 /* Headers */,
+				99732D26C6E7FB534A1B1FC3B369314C /* Sources */,
+				6E15BE3C313BDD1772EC9A66F6649B6E /* Frameworks */,
+				0E4627043B462A165A37480FACEB5FC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CB2E2761E01AFF3A3C09C62BEDFDCA7 /* PBXTargetDependency */,
+			);
+			name = "Pods-ZPSegmentBarOC_Tests";
+			productName = "Pods-ZPSegmentBarOC_Tests";
+			productReference = 76B526EDE79F55595FF1E549B1179B20 /* Pods_ZPSegmentBarOC_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFDCD81B39F02DEFDC7FDA2B0DA52E3B /* ZPSegmentBarOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5668DE5C5A33283A40E347CAFF3DB76E /* Build configuration list for PBXNativeTarget "ZPSegmentBarOC" */;
+			buildPhases = (
+				A5C35B7DB3542ACB756D46547821556A /* Headers */,
+				D97DAB999EDE3D95B7DE9B711FEF0CF1 /* Sources */,
+				9006AD9502998337D70378155B7474F1 /* Frameworks */,
+				DC1A8B611E18EB42986E886DB2BC7477 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -339,120 +336,110 @@
 			);
 			name = ZPSegmentBarOC;
 			productName = ZPSegmentBarOC;
-			productReference = A6087BC66466C3A4A67D96D770ADE807 /* ZPSegmentBarOC.framework */;
+			productReference = CEB06335B9C615CE162AE0D1EF7F2EBB /* ZPSegmentBarOC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 582A95EFC18BE9DED3ADF38DC4023C91 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 99B4B69E2EDBA57981D9B491853CFD17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				923C87515172BC929EC702D3ABCD2F16 /* Pods-ZPSegmentBarOC_Example */,
-				75BAFB65DA7A74BE9F2F26ACF8C4867D /* Pods-ZPSegmentBarOC_Tests */,
-				FF2DE0E4C1B700CA91D3609295A161C0 /* ZPSegmentBarOC */,
+				1EF7C5132C32A0F4BAC6CA37F7A1A33A /* Pods-ZPSegmentBarOC_Example */,
+				A0571D815376B3281913F4FB288913B4 /* Pods-ZPSegmentBarOC_Tests */,
+				CFDCD81B39F02DEFDC7FDA2B0DA52E3B /* ZPSegmentBarOC */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		0E4627043B462A165A37480FACEB5FC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A29BCFB39692B603B278B77B18DC84CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC1A8B611E18EB42986E886DB2BC7477 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		A1DA87D53844AD44EF18DC2F512F0009 /* Sources */ = {
+		96A341A5FEE110E1BB77FCA1C2D1102F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D89B0E1584ADC5628E0C854C9E90DB7 /* Pods-ZPSegmentBarOC_Tests-dummy.m in Sources */,
+				2772ED5B852A8ED038BB2C1F636CA398 /* Pods-ZPSegmentBarOC_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B61E1E78ECC625C8A9202318CE34969E /* Sources */ = {
+		99732D26C6E7FB534A1B1FC3B369314C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C17BC68A2E97111141CF8DC999DD68F8 /* UIView+ZPSegmentBar.m in Sources */,
-				8101BCBBC30994617162D229F4933ACC /* ZPSegmentBarContent.m in Sources */,
-				3F0FF089C8994561B3F613EE08823C76 /* ZPSegmentBarOC-dummy.m in Sources */,
-				3A207F75C01865CF8916E9C01C3F33E5 /* ZPSegmentBarStyle.m in Sources */,
-				6696903512074C231184DD8696D5BDEF /* ZPSegmentBarTitle.m in Sources */,
-				B4C2569352FF223A917414CE936D5734 /* ZPSegmentView.m in Sources */,
+				2FA70EACF4C4250582F2DE7AD7550FAD /* Pods-ZPSegmentBarOC_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE9130779982E1CA2BE5C623888DDC2A /* Sources */ = {
+		D97DAB999EDE3D95B7DE9B711FEF0CF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				097FB2AF8BAA4CCE0277BD72AC8E4965 /* Pods-ZPSegmentBarOC_Example-dummy.m in Sources */,
+				0CA804B0FFE5763DACB1334A156711D7 /* UIView+ZPSegmentBar.m in Sources */,
+				A9620A8EF4DE554149A7EB685BA3DDAF /* ZPSegmentBarContent.m in Sources */,
+				D167197A6D9C2622AF4AFC7567373D80 /* ZPSegmentBarOC-dummy.m in Sources */,
+				E461833B06475D85A403CB70DFF3F48C /* ZPSegmentBarStyle.m in Sources */,
+				FCBC87A7A31CA707CAEC4212AC1BDD2D /* ZPSegmentBarTitle.m in Sources */,
+				3C88975FA48DFFC8DB1A8A2C1220FAEC /* ZPSegmentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5E5231503AC6947CA324DCB90D04D666 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ZPSegmentBarOC;
-			target = FF2DE0E4C1B700CA91D3609295A161C0 /* ZPSegmentBarOC */;
-			targetProxy = 4509F1E4AFB7436249D632BE7E9E8DB1 /* PBXContainerItemProxy */;
-		};
-		B082104C23C635360C0AF285B0768374 /* PBXTargetDependency */ = {
+		3CB2E2761E01AFF3A3C09C62BEDFDCA7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ZPSegmentBarOC_Example";
-			target = 923C87515172BC929EC702D3ABCD2F16 /* Pods-ZPSegmentBarOC_Example */;
-			targetProxy = 4095D637D84D831332073C2B55D2FD8E /* PBXContainerItemProxy */;
+			target = 1EF7C5132C32A0F4BAC6CA37F7A1A33A /* Pods-ZPSegmentBarOC_Example */;
+			targetProxy = 0994646DF93A45AC8201DCDD835B37B4 /* PBXContainerItemProxy */;
+		};
+		8DDCAAF2CE7609747AA92F33035884CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZPSegmentBarOC;
+			target = CFDCD81B39F02DEFDC7FDA2B0DA52E3B /* ZPSegmentBarOC */;
+			targetProxy = 1BEA55085775577DDD14F6D837C6D16B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		125AC426E31AA1965B99901C5B193972 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C47001FCCCD384EA26E605423E3656F3 /* Pods-ZPSegmentBarOC_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Tests/Pods-ZPSegmentBarOC_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
+		05DF210AC65EBB0E593AAF976B2C2177 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -484,8 +471,99 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		0E6D6FF5647A7F29CF11B65A3C0E2B18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F17D37ACF20A99180A7C800F966ECA9 /* Pods-ZPSegmentBarOC_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Example/Pods-ZPSegmentBarOC_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Example/Pods-ZPSegmentBarOC_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		421ECB1396280A8D83853C3DDBED1700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -506,18 +584,21 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		3171610A12F93CB1BA2E91525F513578 /* Release */ = {
+		761E88DBFD9F4C50C4CDE63C059051E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBA1DFDB2E4060BD2A5438D9A00F0941 /* ZPSegmentBarOC.xcconfig */;
+			baseConfigurationReference = 7D19101DF124F085A70E6085B3833124 /* ZPSegmentBarOC.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -529,7 +610,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/ZPSegmentBarOC/ZPSegmentBarOC-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZPSegmentBarOC/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/ZPSegmentBarOC/ZPSegmentBarOC-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -540,48 +621,14 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		67D8775DFE8501742708216454D2CB03 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77BE8B70A6C67CA27C411542FE173A66 /* Pods-ZPSegmentBarOC_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Example/Pods-ZPSegmentBarOC_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		D1C7EF59A7FD273555960F170C7A8FBD /* Release */ = {
+		89EE93EE082F5D0DC6C6CF9D65A26DF9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E7E08413E052CFDC8803651FEE179D5 /* Pods-ZPSegmentBarOC_Example.release.xcconfig */;
+			baseConfigurationReference = 41B793DCEB63994C00E3F36B7C539FD6 /* Pods-ZPSegmentBarOC_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -593,7 +640,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Example/Pods-ZPSegmentBarOC_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -613,97 +660,9 @@
 			};
 			name = Release;
 		};
-		F2B7DB42C4A81B83771F550194C1D996 /* Debug */ = {
+		929D074812A5A380562318DF233E5FFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBA1DFDB2E4060BD2A5438D9A00F0941 /* ZPSegmentBarOC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ZPSegmentBarOC/ZPSegmentBarOC-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ZPSegmentBarOC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ZPSegmentBarOC/ZPSegmentBarOC.modulemap";
-				PRODUCT_MODULE_NAME = ZPSegmentBarOC;
-				PRODUCT_NAME = ZPSegmentBarOC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		F533470E6B92D72EF873AEC381CC1063 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 127E54D2B9F193EF90342E0F5240EB00 /* Pods-ZPSegmentBarOC_Tests.debug.xcconfig */;
+			baseConfigurationReference = CF84410AB8E2ABADB0E76EFE1319F531 /* Pods-ZPSegmentBarOC_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -715,7 +674,72 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Tests/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Tests/Pods-ZPSegmentBarOC_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Tests/Pods-ZPSegmentBarOC_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE492AD07A700CE6C3FE4C2289C0891E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D19101DF124F085A70E6085B3833124 /* ZPSegmentBarOC.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZPSegmentBarOC/ZPSegmentBarOC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZPSegmentBarOC/ZPSegmentBarOC-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZPSegmentBarOC/ZPSegmentBarOC.modulemap";
+				PRODUCT_MODULE_NAME = ZPSegmentBarOC;
+				PRODUCT_NAME = ZPSegmentBarOC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DE0AB24B38077E12983BF725065E1616 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B177E0A6CA0CAF38817593D801C5D9A8 /* Pods-ZPSegmentBarOC_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZPSegmentBarOC_Tests/Pods-ZPSegmentBarOC_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -737,43 +761,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		162FF4F0B6145B2EB9F3EF8B07621CA6 /* Build configuration list for PBXNativeTarget "Pods-ZPSegmentBarOC_Example" */ = {
+		16EE612F1918314687426769EE553F1E /* Build configuration list for PBXNativeTarget "Pods-ZPSegmentBarOC_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				67D8775DFE8501742708216454D2CB03 /* Debug */,
-				D1C7EF59A7FD273555960F170C7A8FBD /* Release */,
+				0E6D6FF5647A7F29CF11B65A3C0E2B18 /* Debug */,
+				89EE93EE082F5D0DC6C6CF9D65A26DF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B9EFF9A8BAE8B5AD05A3AF51D6AE5A7 /* Build configuration list for PBXNativeTarget "ZPSegmentBarOC" */ = {
+		37CEA3A4DC53643045E0353E63C38C6B /* Build configuration list for PBXNativeTarget "Pods-ZPSegmentBarOC_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F2B7DB42C4A81B83771F550194C1D996 /* Debug */,
-				3171610A12F93CB1BA2E91525F513578 /* Release */,
+				DE0AB24B38077E12983BF725065E1616 /* Debug */,
+				929D074812A5A380562318DF233E5FFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
-				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
+				421ECB1396280A8D83853C3DDBED1700 /* Debug */,
+				05DF210AC65EBB0E593AAF976B2C2177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E3CC9EA3EF3F60AF274C45EFEB49319 /* Build configuration list for PBXNativeTarget "Pods-ZPSegmentBarOC_Tests" */ = {
+		5668DE5C5A33283A40E347CAFF3DB76E /* Build configuration list for PBXNativeTarget "ZPSegmentBarOC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F533470E6B92D72EF873AEC381CC1063 /* Debug */,
-				125AC426E31AA1965B99901C5B193972 /* Release */,
+				761E88DBFD9F4C50C4CDE63C059051E6 /* Debug */,
+				AE492AD07A700CE6C3FE4C2289C0891E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
