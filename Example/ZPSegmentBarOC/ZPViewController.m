@@ -35,6 +35,8 @@
     style.isShowCover=NO;//导航条是否显示遮盖效果,默认YES;
 //    style.coverViewMargin=6;//遮盖间距;
     style.isShowBottomLine=NO;//导航条下方是否显示BottomLine,默认YES;
+    
+    
 //    style.bottomLineColor=[UIColor orangeColor];//BottomLine 的颜色;
 //    style.isNeedScale=YES;//导航条是否有放大效果,默认YES;
     
