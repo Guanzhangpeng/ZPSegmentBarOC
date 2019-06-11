@@ -83,7 +83,7 @@
     for (int i=0;i<self.titles.count;i++)
     {
         UIView *titleView = [[UIView alloc] init];
-        titleView.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
+//        titleView.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0];
         titleView.tag=i;
         //初始化title
         UILabel * lblTitle = [[UILabel alloc] init];
@@ -232,7 +232,10 @@
 -(void)setupBottomLine
 {
     [self.scrollView addSubview:self.bottomLine];
-    self.bottomLine.frame=self.titleLbls.firstObject.frame;
+    self.bottomLine.frame=self.titleViews.firstObject.frame;
+    if (self.style.isShowDot && !self.style.isShowImage) {
+        self.bottomLine.width -= 12;
+    }
     self.bottomLine.height=self.style.bottomLineHeight;
     self.bottomLine.y=self.height-self.style.bottomLineHeight;
 }
@@ -241,10 +244,10 @@
 -(void)setupCoverView
 {
     [self.scrollView insertSubview:self.coverView atIndex:0];
-    CGFloat coverViewX = self.titleLbls.firstObject.x - self.style.coverViewMargin;
+    CGFloat coverViewX = self.titleViews.firstObject.x - self.style.coverViewMargin;
     CGFloat coverViewY = (self.style.titleHeight - self.style.coverViewHeight) * 0.5;
     CGFloat coverViewH = self.style.coverViewHeight;
-    CGFloat coverViewW = self.titleLbls.firstObject.width + self.style.coverViewMargin * 2;
+    CGFloat coverViewW = self.titleViews.firstObject.width + self.style.coverViewMargin * 2;
 
     self.coverView.frame= CGRectMake(coverViewX, coverViewY, coverViewW, coverViewH);
 }
@@ -265,6 +268,37 @@
     sourceLabel.textColor = self.style.normalColor;
     targetLabel.textColor = self.style.selecteColor;
     
+    
+    if (self.style.isShowBottomLine) {
+        //调整bottomLine的位置;
+        [UIView animateWithDuration:0.25 animations:^{
+           
+            self.bottomLine.width=targetLabel.width;
+            self.bottomLine.x=targetView.x;
+        }];
+    }
+    
+    
+    
+    //调整选中titleLabel的尺寸;
+    if(self.style.isNeedScale)
+    {
+        [UIView animateWithDuration:0.25 animations:^{
+            sourceLabel.transform=CGAffineTransformIdentity;
+            targetLabel.transform = CGAffineTransformMakeScale(self.style.maxScale, self.style.maxScale);
+            
+        }];
+    }
+    
+    //调整CoverView的位置;
+    if (self.style.isShowCover) {
+        [UIView animateWithDuration:0.25 animations:^{
+            
+            self.coverView.x = targetView.x - self.style.coverViewMargin;
+            self.coverView.width = targetView.width + self.style.coverViewMargin * 2;
+            
+        }];
+    }
     if (self.style.isShowImage){
          UIImageView *targetImageView = targetView.subviews[1];
         UIImageView *sourceImageView = self.titleIcons[_currentIndex];
@@ -279,65 +313,6 @@
     }
     
     _currentIndex = targetView.tag;
-    //调整titleLabel的位置;
-    if (self.style.isScrollEnabled) {
-        [self adjustLabelPosition];
-    }
-}
-#pragma mark 按钮的点击事件
--(void)titleClick:(UITapGestureRecognizer  *)tapGes
-{
-    UILabel * targetLabel =(UILabel *)tapGes.view ;
-    
-    //如果是之前点击的按钮则不再继续执行;
-    if (_currentIndex == targetLabel.tag) {
-        return;
-    }
-    
-    //获取UILabel
-    UILabel * sourceLabel = self.titleLbls[_currentIndex];
-    sourceLabel.textColor = self.style.normalColor;
-    targetLabel.textColor = self.style.selecteColor;
-    
-    
-    if (self.style.isShowBottomLine) {
-        //调整bottomLine的位置;
-        [UIView animateWithDuration:0.25 animations:^{
-            self.bottomLine.width=targetLabel.width;
-            self.bottomLine.centerX=targetLabel.centerX;
-        }];
-    }
-    
-   
-
-    //调整选中titleLabel的尺寸;
-    if(self.style.isNeedScale)
-    {
-        [UIView animateWithDuration:0.25 animations:^{
-            sourceLabel.transform=CGAffineTransformIdentity;
-            targetLabel.transform = CGAffineTransformMakeScale(self.style.maxScale, self.style.maxScale);
-            
-        }];
-    }
-
-    //调整CoverView的位置;
-    if (self.style.isShowCover) {
-        [UIView animateWithDuration:0.25 animations:^{
-            
-            self.coverView.x = targetLabel.x - self.style.coverViewMargin;
-            self.coverView.width = targetLabel.width + self.style.coverViewMargin * 2;
-            
-        }];
-    }
-    
-    //执行代理方法
-    if ([self.delegate respondsToSelector:@selector(segmentBarTitle:fromIndex:toIndex:)]) {
-        
-        [self.delegate segmentBarTitle:self fromIndex:_currentIndex toIndex:targetLabel.tag];
-        
-    }
-     _currentIndex = targetLabel.tag;
-    
     //调整titleLabel的位置;
     if (self.style.isScrollEnabled) {
         [self adjustLabelPosition];
@@ -389,6 +364,8 @@
 {
 
     //1.0 获取UILabel
+    UIView *sourceView = self.titleViews[fromIndex];
+     UIView *targetView = self.titleViews[selectedIndex];
     UILabel * sourceLabel = self.titleLbls[fromIndex];
     UILabel * targetLabel = self.titleLbls[selectedIndex];
     
@@ -439,15 +416,16 @@
             targetLabel.transform = CGAffineTransformMakeScale(1.0 + deltaScale * process, 1.0 + deltaScale * process);
         }];
     }
-    CGFloat deltaX = targetLabel.x - sourceLabel.x;
-    CGFloat deltaWidth = targetLabel.width - sourceLabel.width;
+    CGFloat deltaX = targetView.x - sourceView.x;
+    CGFloat deltaWidth = targetView.width - sourceView.width;
     
     //4.0 改变bottomLine的位置;
     if (self.style.isShowBottomLine)
     {
         [UIView animateWithDuration:0.25 animations:^{
-            self.bottomLine.x= sourceLabel.x + deltaX * process;
             self.bottomLine.width=sourceLabel.width + deltaWidth * process;
+            self.bottomLine.x= sourceView.x + deltaX * process;
+            
         }];
     }
     
@@ -455,7 +433,7 @@
     if(self.style.isShowCover)
     {
         [UIView animateWithDuration:0.25 animations:^{
-            self.coverView.x=sourceLabel.x+deltaX * process -self.style.coverViewMargin;
+            self.coverView.x=sourceView.x+deltaX * process -self.style.coverViewMargin;
             self.coverView.width = sourceLabel.width +deltaWidth * process+ self.style.coverViewMargin * 2;
         }];
     }

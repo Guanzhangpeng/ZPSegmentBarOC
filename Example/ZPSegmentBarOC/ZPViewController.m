@@ -32,13 +32,13 @@
     
     ZPSegmentBarStyle * style=[[ZPSegmentBarStyle alloc] init];
     style.isScrollEnabled=NO;//导航条是否可以滚动,默认YES;
-    style.isShowCover=NO;//导航条是否显示遮盖效果,默认YES;
-//    style.coverViewMargin=6;//遮盖间距;
-    style.isShowBottomLine=NO;//导航条下方是否显示BottomLine,默认YES;
-    
-    
+    style.isShowCover=YES;//导航条是否显示遮盖效果,默认YES;
+    style.coverViewMargin=6;//遮盖间距;
+    style.isShowBottomLine=YES;//导航条下方是否显示BottomLine,默认YES;
+//
+//    
 //    style.bottomLineColor=[UIColor orangeColor];//BottomLine 的颜色;
-//    style.isNeedScale=YES;//导航条是否有放大效果,默认YES;
+    style.isNeedScale=YES;//导航条是否有放大效果,默认YES;
     
 //    style.isShowImage = YES;
 //    style.imageNames = @[@"message_sys",@"message_tz",@"message_sys",@"message_tz"];

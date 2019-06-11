@@ -1,5 +1,5 @@
 PODS:
-  - ZPSegmentBarOC (0.2.4)
+  - ZPSegmentBarOC (0.2.5)
 
 DEPENDENCIES:
   - ZPSegmentBarOC (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZPSegmentBarOC: 785cf71dd2a74939b5f209f055e4227cc3cb88f7
+  ZPSegmentBarOC: 5a1258daeee2f86c20f880e411ccd462d5a59d45
 
 PODFILE CHECKSUM: 36681a520ae29e596953a21b222142d49f6867e1
 
